@@ -1,0 +1,3330 @@
+{
+  "as_of": "2026-10-27",
+  "scope": "Backward citation tracing from ACDS, NOMA, and SagaLLM. Main window: publication years 2024–2026. CIDR and VLDB workshops are explicit extensions; older conferences and journals remain background annexes. No recursive snowballing.",
+  "seeds": {
+    "ACDS": {
+      "title": "Agent-Centric Data System: Architecture, Literature, and Challenges",
+      "local_file": "Agent-Centric Data System.pdf",
+      "reference_count": 149
+    },
+    "NOMA": {
+      "title": "Rethinking Query Optimization for Multi-Agent Systems",
+      "url": "https://www.vldb.org/pvldb/vol20/p46-kaoudi.pdf",
+      "reference_count": 35
+    },
+    "SagaLLM": {
+      "title": "SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning",
+      "url": "https://www.vldb.org/pvldb/vol18/p4874-chang.pdf",
+      "doi": "10.14778/3750601.3750611",
+      "reference_count": 52
+    }
+  },
+  "verification_notes": [
+    "Labels and primary-layer assignments are our interpretation, not the seed papers’ shared taxonomy.",
+    "This is a bounded citation audit, not an exhaustive venue-wide survey.",
+    "Historical and journal references marked seed_citation_only have not been independently verified.",
+    "Crossref title queries produced false matches (NiagaraCQ, DuckDB, Milvus, Druid, incremental views); these were rejected. Some requests returned HTTP 429; official sources or explicit unverified labels were used.",
+    "SIGMOD Record / The VLDB Journal / TODS / database workshops are not conflated with main conference proceedings.",
+    "Only publication years 2024–2026 from core conferences, CIDR, and named VLDB workshops are merged into the recent searchable library."
+  ],
+  "papers": [
+    {
+      "key": "delta",
+      "title": "Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores",
+      "year": 2020,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 3,
+          "as_cited": "Armbrust, M., Das, T., Paranjpye, S., Xin, R., Zhu, S., Ghodsi, A., Yavuz, B., Murthy, M., Torres, J., Sun, L., Boncz, P., Mokhtar, M., Hovell, H.V., Ionescu, A., Luszczak, A., Switakowski, M., Ueshin, T., Li, X., Szafranski, M., Senster, P., Zaharia, M.: Delta lake: High-performance ACID table storage over cloud ob- ject stores. Proc. VLDB Endow. 13(12), 3411–3424 (2020) 20 Zuohan Wu*† et al."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:delta",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "eddies",
+      "title": "Eddies: Continuously Adaptive Query Processing",
+      "year": 2000,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 4,
+          "as_cited": "Avnur, R., Hellerstein, J.M.: Eddies: Continuously adaptive query processing. In: SIGMOD Conference, pp. 261–272. ACM (2000)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://db.cs.berkeley.edu/papers/sigmod00-eddy.pdf",
+      "doi": null,
+      "url": "https://db.cs.berkeley.edu/papers/sigmod00-eddy.pdf",
+      "pdf_url": "https://db.cs.berkeley.edu/papers/sigmod00-eddy.pdf",
+      "authors": [
+        "Ron Avnur",
+        "Joseph M. Hellerstein"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://db.cs.berkeley.edu/papers/sigmod00-eddy.pdf"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "historical_foundation",
+      "mas_scope_label": "Historical foundation",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "historical_method",
+      "review_location": "Abstract; ACDS §3.2–3.3",
+      "scope_note_zh": "运行中自适应算子路由，可借鉴局部计划调整。",
+      "limitation_zh": "2000；不是 MAS 逻辑规划系统。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://db.cs.berkeley.edu/papers/sigmod00-eddy.pdf",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "运行中自适应算子路由，可借鉴局部计划调整。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "tag",
+      "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG",
+      "year": 2025,
+      "venue": "CIDR",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 5,
+          "as_cited": "Biswal, A., Jha, S., Guestrin, C., Zaharia, M., Gonzalez, J.E., Kamsetty, A., Liu, S., Patel, L.: Text2sql is not enough: Unifying AI and databases with TAG. In: CIDR. www.cidrdb.org (2025)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/cidrdb/2025/text2sql-is-not-enough-unifying-ai-and-databases-with-tag.html",
+      "doi": null,
+      "url": "https://www.vldb.org/cidrdb/2025/text2sql-is-not-enough-unifying-ai-and-databases-with-tag.html",
+      "pdf_url": "https://www.vldb.org/cidrdb/papers/2025/p11-biswal.pdf",
+      "authors": [
+        "Asim Biswal",
+        "Liana Patel",
+        "Siddharth Jha",
+        "Amog Kamsetty",
+        "Shu Liu",
+        "Joseph E Gonzalez",
+        "Carlos Guestrin",
+        "Matei Zaharia"
+      ],
+      "collection_group": "recent_cidr",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/cidrdb/2025/text2sql-is-not-enough-unifying-ai-and-databases-with-tag.html"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "background_only",
+      "mas_scope_label": "Background only",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": "method_reference",
+      "review_location": "Abstract; ACDS §3.2",
+      "scope_note_zh": "自然语言问题、SQL 查询和答案生成的表示参考。",
+      "limitation_zh": "多阶段 LM–DB 交互不等于多个协作 agents。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "AI systems that serve natural language questions over databases promise to unlock tremendous value. Such systems would allow users to leverage the powerful reasoning and knowledge capabilities of language models (LMs) alongside the scalable computational power of data management systems. These combined capabilities would empower users to ask arbitrary natural language questions over custom data sources. However, existing methods and benchmarks insufficiently explore this setting. Text2SQL methods focus solely on natural language questions that can be expressed in relational algebra, representing a small subset of the questions real users wish to ask. Likewise, Retrieval-Augmented Generation (RAG) considers the limited subset of queries that can be answered with point lookups to one or a few data records within the database. We propose Table-Augmented Generation (TAG), a unified and general-purpose paradigm for answering natural language questions over databases. The TAG model represents a wide range of interactions between the LM and database that have been previously unexplored and creates exciting research opportunities for leveraging the world knowledge and reasoning capabilities of LMs over data. We systematically develop benchmarks to study the TAG problem and find that standard methods answer no more than 20% of queries correctly, confirming the need for further research in this area. We release code for the benchmark at https://github.com/TAG-Research/TAG-Bench.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://www.vldb.org/cidrdb/2025/text2sql-is-not-enough-unifying-ai-and-databases-with-tag.html",
+      "abstract_version": "CIDR official proceedings abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Vision / benchmark"
+    },
+    {
+      "key": "whywhere",
+      "title": "Why and Where: A Characterization of Data Provenance",
+      "year": 2001,
+      "venue": "ICDT",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 6,
+          "as_cited": "Buneman, P., Khanna, S., Tan, W.C.: Why and where: A characterization of data provenance. In: ICDT, Lecture Notes in Computer Science, vol. 1973, pp. 316–330. Springer (2001)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:whywhere",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "niagara",
+      "title": "NiagaraCQ: A Scalable Continuous Query System for Internet Databases",
+      "year": 2000,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 8,
+          "as_cited": "Chen, J., DeWitt, D.J., Tian, F., Wang, Y.: Niagaracq: A scalable continuous query system for internet databases. In: SIGMOD Conference, pp. 379–390. ACM (2000)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://research.cs.wisc.edu/niagara/papers/NiagaraCQ.pdf",
+      "doi": null,
+      "url": "https://research.cs.wisc.edu/niagara/papers/NiagaraCQ.pdf",
+      "pdf_url": "https://research.cs.wisc.edu/niagara/papers/NiagaraCQ.pdf",
+      "authors": [
+        "Jianjun Chen",
+        "David J. DeWitt",
+        "Feng Tian",
+        "Yuan Wang"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://research.cs.wisc.edu/niagara/papers/NiagaraCQ.pdf",
+        "https://research.cs.wisc.edu/niagara/Publications.html"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": "379–390"
+      },
+      "mas_scope": "historical_foundation",
+      "mas_scope_label": "Historical foundation",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "historical_method",
+      "review_location": "Abstract; ACDS §3.2–3.3",
+      "scope_note_zh": "通过查询分组共享连续查询计算，是共享工作识别的方法来源。",
+      "limitation_zh": "2000；传统数据库，无 LLM/MAS 实证，不计入最近三年。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://research.cs.wisc.edu/niagara/papers/NiagaraCQ.pdf",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "通过查询分组共享连续查询计算，是共享工作识别的方法来源。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "dataset_discovery",
+      "title": "Semantics-aware Dataset Discovery from Data Lakes with Contextualized Column-based Representation Learning",
+      "year": 2023,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 20,
+          "as_cited": "Fan, G., Wang, J., Li, Y., Zhang, D., Miller, R.J.: Semantics-aware dataset discovery from data lakes with contextualized column-based representation learning. Proc. VLDB Endow. 16(7), 1726–1739 (2023)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "10.14778/3587136.3587146",
+      "doi": "10.14778/3587136.3587146",
+      "url": "https://doi.org/10.14778/3587136.3587146",
+      "pdf_url": null,
+      "authors": [
+        "Grace Fan",
+        "Jin Wang",
+        "Yuliang Li",
+        "Dan Zhang",
+        "Renée J. Miller"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.14778/3587136.3587146"
+      ],
+      "bibliographic": {
+        "volume": "16",
+        "issue": "7",
+        "page": "1726-1739"
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": "Dataset discovery from data lakes is essential in many real application scenarios. In this paper, we propose Starmie, an end-to-end framework for dataset discovery from data lakes (with table union search as the main use case). Our proposed framework features a contrastive learning method to train column encoders from pre-trained language models in a fully unsupervised manner. The column encoder of Starmie captures the rich contextual semantic information within tables by leveraging a contrastive multi-column pre-training strategy. We utilize the cosine similarity between column embedding vectors as the column unionability score and propose a filter-and-verification framework that allows exploring a variety of design choices to compute the unionability score between two tables accordingly. Empirical results on real table benchmarks show that Starmie outperforms the best-known solutions in the effectiveness of table union search by 6.8 in MAP and recall. Moreover, Starmie is the first to employ the HNSW (Hierarchical Navigable Small World) index to accelerate query processing of table union search which provides a 3,000X performance gain over the linear scan baseline and a 400X performance gain over an LSH index (the state-of-the-art solution for data lake indexing).",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.crossref.org/works/10.14778/3587136.3587146",
+      "abstract_version": "Publisher-deposited abstract (Crossref), matched to official PDF",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "dataspaces",
+      "title": "From Databases to Dataspaces: A New Abstraction for Information Management",
+      "year": 2005,
+      "venue": "SIGMOD Record",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 24,
+          "as_cited": "Franklin, M.J., Halevy, A.Y., Maier, D.: From databases to dataspaces: a new abstraction for information man- agement. SIGMOD Rec. 34(4), 27–33 (2005)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:dataspaces",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "journal_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "sagas",
+      "title": "Sagas",
+      "year": 1987,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 27,
+          "as_cited": "Garcia-Molina, H., Salem, K.: Sagas. In: SIGMOD Conference, pp. 249–259. ACM Press (1987)"
+        },
+        {
+          "seed": "SagaLLM",
+          "reference_number": 18,
+          "as_cited": "Hector Garcia-Molina and Kenneth Salem. Sagas. In Proceedings of the 1987 ACM SIGMOD International Conference on Management of Data, SIGMOD ’87, pages 249–259, New York, NY, USA, 1987. Association for Computing Machinery. ISBN 0897912365. doi: 10.1145/38713.38742. URL https://doi.org/10.1145/38713.38742."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1145/38713.38742",
+      "id": "10.1145/38713.38742",
+      "url": "https://doi.org/10.1145/38713.38742",
+      "pdf_url": null,
+      "authors": [
+        "Hector Garcia-Molina",
+        "Kenneth Salem"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1145/38713.38742"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": "249-259"
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://doi.org/10.1145/38713.38742",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": false
+    },
+    {
+      "key": "shareddb",
+      "title": "SharedDB: Killing One Thousand Queries with One Stone",
+      "year": 2012,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 30,
+          "as_cited": "Giannikis, G., Alonso, G., Kossmann, D.: Shareddb: Killing one thousand queries with one stone. Proc. VLDB Endow. 5(6), 526–537 (2012)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/pvldb/vol5/p526_georgiosgiannikis_vldb2012.pdf",
+      "doi": null,
+      "url": "https://www.vldb.org/pvldb/vol5/p526_georgiosgiannikis_vldb2012.pdf",
+      "pdf_url": "https://www.vldb.org/pvldb/vol5/p526_georgiosgiannikis_vldb2012.pdf",
+      "authors": [
+        "Georgios Giannikis",
+        "Gustavo Alonso",
+        "Donald Kossmann"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/pvldb/vol5/p526_georgiosgiannikis_vldb2012.pdf"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "historical_foundation",
+      "mas_scope_label": "Historical foundation",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "historical_method",
+      "review_location": "Abstract, §1, p526; ACDS §3.2–3.3",
+      "scope_note_zh": "跨查询共享计算与结果路由，是任务合并的经典方法来源。",
+      "limitation_zh": "2012；传统数据库，无 LLM/MAS 实证，不计入最近三年。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://www.vldb.org/pvldb/vol5/p526_georgiosgiannikis_vldb2012.pdf",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "跨查询共享计算与结果路由，是任务合并的经典方法来源。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "ivm",
+      "title": "Maintaining Views Incrementally",
+      "year": 1993,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 35,
+          "as_cited": "Gupta, A., Mumick, I.S., Subrahmanian, V.S.: Main- taining views incrementally. In: SIGMOD Conference, pp. 157–166. ACM Press (1993)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://sigmodrecord.org/1993/06/03/maintaining-views-incrementally/",
+      "doi": null,
+      "url": "https://sigmodrecord.org/1993/06/03/maintaining-views-incrementally/",
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://sigmodrecord.org/1993/06/03/maintaining-views-incrementally/",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "principles_dataspace",
+      "title": "Principles of Dataspace Systems",
+      "year": 2006,
+      "venue": "PODS",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 37,
+          "as_cited": "Halevy, A.Y., Franklin, M.J., Maier, D.: Principles of dataspace systems. In: PODS, pp. 1–9. ACM (2006)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:principles_dataspace",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "santos",
+      "title": "SANTOS: Relationship-based Semantic Table Union Search",
+      "year": 2023,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 45,
+          "as_cited": "Khatiwada, A., Fan, G., Shraga, R., Chen, Z., Gat- terbauer, W., Miller, R.J., Riedewald, M.: SANTOS: relationship-based semantic table union search. Proc. ACM Manag. Data 1(1), 9:1–9:25 (2023)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:santos",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "sic",
+      "title": "Semantic Integrity Constraints: Declarative Guardrails for AI-Augmented Data Processing Systems",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 53,
+          "as_cited": "Lee, A.W., Chan, J., Fu, M., Kim, N., Mehta, A., Ragha- van, D., Çetintemel, U.: Semantic integrity constraints: Declarative guardrails for ai-augmented data process- ing systems. Proc. VLDB Endow. 18(11), 4073–4080 (2025)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3749646.3749677",
+      "doi": "10.14778/3749646.3749677",
+      "id": "10.14778/3749646.3749677",
+      "url": "https://doi.org/10.14778/3749646.3749677",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p4073-lee.pdf",
+      "authors": [
+        "Alexander Lee",
+        "Justin Chan",
+        "Michael Fu",
+        "Nicolas Kim",
+        "Akshay Mehta",
+        "Deepti Raghavan",
+        "Ugur Cetintemel"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://doi.org/10.14778/3749646.3749677",
+        "https://openalex.org/W4413978037",
+        "https://www.vldb.org/pvldb/vol18.html",
+        "https://api.crossref.org/works/10.14778/3749646.3749677"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "11",
+        "first_page": "4073",
+        "last_page": "4080"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Reuse Analysis",
+      "planning_relevance": "method_reference",
+      "review_location": "§3–4.1, pp4075–4076",
+      "scope_note_zh": "声明式语义约束及约束下推/重排可用于思考 MAS 计划变换的约束。",
+      "limitation_zh": "面向 AI 数据处理系统的愿景，不是已经验证的 MAS 共享安全机制，也没有证明语义近似任务可合并。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "AI-augmented data processing systems (DPSs) integrate large language models (LLMs) into query pipelines, allowing powerful semantic operations on structured and unstructured data. However, the reliability (a.k.a. trust) of these systems is fundamentally challenged by the potential for LLMs to produce errors, limiting their adoption in critical domains. To help address this reliability bottleneck, we introduce semantic integrity constraints (SICs) —a declarative abstraction for specifying and enforcing correctness conditions over LLM outputs in semantic queries. SICs generalize traditional database integrity constraints to semantic settings, supporting common types of constraints, such as grounding, soundness, and exclusion, with both reactive and proactive enforcement strategies. We argue that SICs provide a foundation for building reliable and auditable AI-augmented data systems. Specifically, we present a system design for integrating SICs into query planning and runtime execution and discuss its realization in AI-augmented DPSs. To guide and evaluate our vision, we outline several design goals—covering criteria around expressiveness, runtime semantics, integration, performance, and enterprise-scale applicability—and discuss how our framework addresses each, along with open research challenges.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4413978037",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Vision",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "palimpzest",
+      "title": "Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing",
+      "year": 2025,
+      "venue": "CIDR",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 58,
+          "as_cited": "Liu, C., Russo, M., Cafarella, M.J., Cao, L., Chen, P.B., Chen, Z., Franklin, M.J., Kraska, T., Madden, S., Sha- hout, R., Vitagliano, G.: Palimpzest: Optimizing ai- powered analytics with declarative query processing. In: CIDR. www.cidrdb.org (2025)"
+        },
+        {
+          "seed": "NOMA",
+          "reference_number": 20,
+          "as_cited": "Chunwei Liu, Matthew Russo, Michael J. Cafarella, Lei Cao, Peter Baile Chen, Zui Chen, Michael J. Franklin, Tim Kraska, Samuel Madden, Rana Shahout, and Gerardo Vitagliano. 2025. Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing. In 15th Conference on Innovative Data Systems Research, CIDR 2025. www.cidrdb.org."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/cidrdb/2025/palimpzest-optimizing-ai-powered-analytics-with-declarative-query-processing.html",
+      "doi": null,
+      "url": "https://www.vldb.org/cidrdb/2025/palimpzest-optimizing-ai-powered-analytics-with-declarative-query-processing.html",
+      "pdf_url": "https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf",
+      "authors": [
+        "Chunwei Liu",
+        "Matthew Russo",
+        "Michael Cafarella",
+        "Lei Cao",
+        "Peter Baile Chen",
+        "Zui Chen",
+        "Michael Franklin",
+        "Tim Kraska",
+        "Samuel Madden",
+        "Rana Shahout",
+        "Gerardo Vitagliano"
+      ],
+      "collection_group": "recent_cidr",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/cidrdb/2025/palimpzest-optimizing-ai-powered-analytics-with-declarative-query-processing.html"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "method_reference",
+      "review_location": "§2–4, pp2–5",
+      "scope_note_zh": "声明式逻辑/物理计划与成本—时延—质量权衡可借鉴；适合作为计划表示与优化基线。",
+      "limitation_zh": "semantic analytics / compound AI 不自动等于 MAS；主要选择模型和物理实现。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "A long-standing goal of data management systems has been to build systems which can compute quantitative insights over large collections of unstructured data in a cost-effective manner. Until recently, it was difficult and expensive to extract facts from company documents, data from scientific papers, or metrics from image and video corpora. Today’s models can accomplish these tasks with high accuracy. However, a programmer who wants to answer a substantive AI-powered query must orchestrate large numbers of models, prompts, and data operations. In this paper, we present PALIMPZEST, a system that enables programmers to pose AI-powered analytical queries over arbitrary collections of unstructured data in a simple declarative language. The system uses a cost optimization framework — which explores the search space of AI models, prompting techniques, and related foundation model optimizations. PALIMPZEST implements the query while navigating the trade-offs between runtime, financial cost, and output data quality. We introduce a novel language for AIpowered analytics tasks, the optimization methods that PALIMPZEST uses, and the prototype system itself. We evaluate PALIMPZEST on a real-world workload. Our system produces plans that are up to 3.3x faster and 2.9x cheaper than a baseline method when using a singlethread setup, while also achieving superior F1-scores. PALIMPZEST applies its optimizations automatically, requiring no additional work from the user.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://www.vldb.org/cidrdb/2025/palimpzest-optimizing-ai-powered-analytics-with-declarative-query-processing.html",
+      "abstract_version": "CIDR official proceedings abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research"
+    },
+    {
+      "key": "overlords",
+      "title": "Supporting Our AI Overlords: Redesigning Data Systems to be Agent-First",
+      "year": 2026,
+      "venue": "CIDR",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 59,
+          "as_cited": "Liu, S., Ponnapalli, S., Shankar, S., Zeighami, S., Zhu, A., Agarwal, S., Chen, R., Suwito, S., Yuan, S., Sto- ica, I., Zaharia, M., Cheung, A., Crooks, N., Gonzalez, J., Parameswaran, A.G.: Supporting our AI overlords: Redesigning data systems to be agent-first. In: CIDR. www.cidrdb.org (2026)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/cidrdb/2026/supporting-our-ai-overlords-redesigning-data-systems-to-be-agent-first.html",
+      "doi": null,
+      "url": "https://www.vldb.org/cidrdb/2026/supporting-our-ai-overlords-redesigning-data-systems-to-be-agent-first.html",
+      "pdf_url": "https://www.vldb.org/cidrdb/papers/2026/p32-liu.pdf",
+      "authors": [
+        "Shu Liu",
+        "Soujanya Ponnapalli",
+        "Shreya Shankar",
+        "Sepanta Zeighami",
+        "Alan Zhu",
+        "Shubham Agarwal",
+        "Ruiqi Chen",
+        "Samion Suwito",
+        "Shuo Yuan",
+        "Ion Stoica",
+        "Matei Zaharia",
+        "Alvin Cheung",
+        "Natacha Crooks",
+        "Joseph E. Gonzalez",
+        "Aditya G. Parameswaran"
+      ],
+      "collection_group": "recent_cidr",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/cidrdb/2026/supporting-our-ai-overlords-redesigning-data-systems-to-be-agent-first.html"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "mas_vision",
+      "mas_scope_label": "DB for MAS: vision",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "direct_vision",
+      "review_location": "§2 p2; §3 p3; §5.2 pp5–6",
+      "scope_note_zh": "明确描述主管与 field agents，并提出跨 agent / 跨轮次 probe 的共同计算识别、裁剪与复用。可支撑 Planning 的任务共享与复用研究动机。",
+      "limitation_zh": "是愿景；并行案例模拟主管与独立尝试，另有单 agent 顺序案例，不能据此宣称提出的多 agent 优化器已实现。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "Large Language Model (LLM) agents, acting on their users’ behalf to manipulate and analyze data, are likely to become the dominant workload for data systems in the future. When working with data, agents employ a high-throughput process of exploration and solution formulation for the given task, one we call agentic speculation. The sheer volume and inefficiencies of agentic speculation can pose challenges for present-day data systems. We argue that data systems need to adapt to more natively support agentic workloads. We take advantage of the characteristics of agentic speculation that we identify, i.e., scale, heterogeneity, redundancy, and steerability—to outline a number of new research opportunities for a new agent-first data systems architecture, ranging from new query interfaces, to new query processing techniques, to new agentic memory stores.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://www.vldb.org/cidrdb/2026/supporting-our-ai-overlords-redesigning-data-systems-to-be-agent-first.html",
+      "abstract_version": "CIDR official proceedings abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Vision"
+    },
+    {
+      "key": "bao",
+      "title": "Bao: Making Learned Query Optimization Practical",
+      "year": 2021,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 64,
+          "as_cited": "Marcus, R., Negi, P., Mao, H., Tatbul, N., Alizadeh, M., Kraska, T.: Bao: Making learned query optimization practical. In: SIGMOD Conference, pp. 1275–1288. ACM (2021)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "10.1145/3448016.3452838",
+      "doi": "10.1145/3448016.3452838",
+      "url": "https://doi.org/10.1145/3448016.3452838",
+      "pdf_url": null,
+      "authors": [
+        "Ryan Marcus",
+        "Parimarjan Negi",
+        "Hongzi Mao",
+        "Nesime Tatbul",
+        "Mohammad Alizadeh",
+        "Tim Kraska"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1145/3448016.3452838"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": "1275-1288"
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://doi.org/10.1145/3448016.3452838",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": false
+    },
+    {
+      "key": "prov",
+      "title": "The W3C PROV Family of Specifications for Modelling Provenance Metadata",
+      "year": 2013,
+      "venue": "EDBT",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 69,
+          "as_cited": "Missier, P., Belhajjame, K., Cheney, J.: The W3C PROV family of specifications for modelling provenance meta- data. In: EDBT, pp. 773–776. ACM (2013)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:prov",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "aries",
+      "title": "ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging",
+      "year": 1992,
+      "venue": "TODS",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 71,
+          "as_cited": "Mohan, C., Haderle, D., Lindsay, B.G., Pirahesh, H., Schwarz, P.M.: ARIES: A transaction recovery method supporting fine-granularity locking and partial roll- backs using write-ahead logging. ACM Trans. Database Syst. 17(1), 94–162 (1992)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:aries",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "journal_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "datalake",
+      "title": "Data Lake Management: Challenges and Opportunities",
+      "year": 2019,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 74,
+          "as_cited": "Nargesian, F., Zhu, E., Miller, R.J., Pu, K.Q., Arocena, P.C.: Data lake management: Challenges and opportu- nities. Proc. VLDB Endow. 12(12), 1986–1989 (2019)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:datalake",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "rdf3x",
+      "title": "RDF-3X: A RISC-style Engine for RDF",
+      "year": 2008,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 75,
+          "as_cited": "Neumann, T., Weikum, G.: RDF-3X: a risc-style engine for RDF. Proc. VLDB Endow. 1(1), 647–659 (2008)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:rdf3x",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "vectordb",
+      "title": "Survey of Vector Database Management Systems",
+      "year": 2024,
+      "venue": "VLDB Journal",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 81,
+          "as_cited": "Pan, J.J., Wang, J., Li, G.: Survey of vector database management systems. VLDB J. 33(5), 1591–1615 (2024)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:vectordb",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "journal_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "lotus",
+      "title": "Semantic Operators and Their Optimization: Towards AI-Based Data Analytics with Accuracy Guarantees",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 84,
+          "as_cited": "Patel, L., Jha, S., Pan, M., Gupta, H., Asawa, P., Guestrin, C., Zaharia, M.: Semantic operators: A declar- ative model for rich, ai-based data processing (2025). URL https://arxiv.org/abs/2407.11418"
+        },
+        {
+          "seed": "NOMA",
+          "reference_number": 24,
+          "as_cited": "Liana Patel, Siddharth Jha, Melissa Z. Pan, Harshit Gupta, Parth Asawa, Carlos Guestrin, and Matei Zaharia. 2025. Semantic Operators and Their Optimization: Towards AI-Based Data Analytics with Accuracy Guarantees. Proc. VLDB Endow. 18, 11 (2025), 4171–4184. https://doi.org/10.14778/3749646.3749685"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3749646.3749685",
+      "doi": "10.14778/3749646.3749685",
+      "id": "10.14778/3749646.3749685",
+      "url": "https://doi.org/10.14778/3749646.3749685",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p4171-patel.pdf",
+      "authors": [
+        "Liana Patel",
+        "Siddharth Jha",
+        "Melissa Pan",
+        "Harshit Gupta",
+        "Parth Asawa",
+        "Carlos Guestrin",
+        "Matei Zaharia"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://doi.org/10.14778/3749646.3749685",
+        "https://openalex.org/W4413979874",
+        "https://www.vldb.org/pvldb/vol18.html",
+        "https://api.crossref.org/works/10.14778/3749646.3749685"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "11",
+        "first_page": "4171",
+        "last_page": "4184"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "method_reference",
+      "review_location": "Abstract; ACDS §3.2; NOMA related work",
+      "scope_note_zh": "语义关系算子及带精度约束的实现优化，可作为计划算子表达和实现方法参考。",
+      "limitation_zh": "未确认多 agent 协作；Crossref 与 PDF/种子文献的标题有不同表述，保留 DOI 和标题别名，不重复计数。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "The semantic capabilities of large language models (LLMs) have the potential to enable rich analytics and reasoning over vast knowledge corpora. Unfortunately, existing systems either empirically optimize expensive LLM-powered operations with no performance guarantees , or limit their support to simple batched-inference primitives. We introduce semantic operators , the first formalism with statistical accuracy guarantees for general-purpose AI-based operations with natural language parameters (e.g., filtering, sorting, joining or aggregating records using natural language criteria). Each operator can be implemented by multiple AI algorithms , which compose individual model invocations to orchestrate the model over the data. Our programming model specifies the expected behavior of each operator with a high-quality reference algorithm , and we develop an optimization framework that reduces cost, while providing accuracy guarantees for individual operators. Using this approach, we propose several novel optimizations to accelerate semantic filtering, joining, group-by and top-k operations by up to 1, 000×. We implement semantic operators in the LOTUS system and demonstrate LOTUS' effectiveness on real, bulk-semantic processing applications, including fact-checking, biomedical multi-label classification, search, and topic analysis. We show that the semantic operator model is expressive, capturing state-of-the-art AI pipelines in a few operator calls, and making it easy to express new pipelines that match or exceed quality of recent LLM-based analytic systems by up to 170%, while offering accuracy guarantees. Overall, LOTUS programs match or exceed the accuracy of state-of-the-art AI pipelines for each task while running up to 3.6× faster than the highest-quality baselines. LOTUS is publicly available at https://github.com/lotus-data/lotus.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4413979874",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)",
+      "title_aliases": [
+        "Semantic Operators and Their Optimization: Towards AI-Based Data Analytics with Accuracy Guarantees",
+        "Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS"
+      ],
+      "metadata_note": "Same DOI; seed/PDF title and Crossref title differ. Kept as one work.",
+      "version_note": "ACDS cited a preprint; linked here to the verified published record.",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "sema",
+      "title": "SEMA: A High-performance System for LLM-based Semantic Query Processing",
+      "year": 2026,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 87,
+          "as_cited": "Qi, K., Xie, D., Li, W., Zhang, H., Zhu, Y., Yu, J.X., Zhao, K.: Sema: A high-performance system for llm-based semantic query processing. CoRR abs/2603.11622 (2026)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3836663.3836685",
+      "doi": "10.14778/3836663.3836685",
+      "id": "10.14778/3836663.3836685",
+      "url": "https://doi.org/10.14778/3836663.3836685",
+      "pdf_url": "https://www.vldb.org/pvldb/vol19/p3231-zhao.pdf",
+      "authors": [
+        "Kangkang Qi",
+        "Dongyang Xie",
+        "Wenbo Li",
+        "Hao Zhang",
+        "Yuanyuan Zhu",
+        "Jeffrey Xu Yu",
+        "Kangfei Zhao"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W7135229600",
+        "https://www.vldb.org/pvldb/vol19.html",
+        "https://api.crossref.org/works/10.14778/3836663.3836685"
+      ],
+      "bibliographic": {
+        "volume": "19",
+        "issue": "11",
+        "first_page": "3231",
+        "last_page": "3244"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": null,
+      "review_location": "Published abstract",
+      "scope_note_zh": "LLM 语义查询处理的执行优化参考。",
+      "limitation_zh": "ACDS 引用预印本，已关联到 PVLDB 19 的发表版本；不是已确认 MAS 系统。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "The integration of Large Language Models (LLMs) into data analytics has unlocked powerful capabilities for reasoning over bulk structured and unstructured data. However, existing systems typically rely on either DataFrame primitives, which lack the efficient execution infrastructure of modern DBMSs, or SQL User-Defined Functions (UDFs), which isolate semantic logic from the query optimizer. The LLM-powered semantic operators also bring new challenges due to the high cost and non-deterministic nature of the LLM invocation, where conventional optimization rules and cost models are inapplicable for their optimization. To bridge these gaps, we present Sema, a high-performance semantic query engine built on DuckDB that treats LLM-powered semantic operators as first-class citizens. Sema introduces SemaSQL, a declarative dialect that allows users to seamlessly inject natural language expressions into standard SQL clauses, enabling end-to-end optimization and execution. At the logical level, the optimizer of Sema compresses natural language expressions and deduces relational constraints from semantic operators. At runtime, Sema employs Adaptive Query Execution (AQE) to dynamically reorder operators, fuse semantic operations, and apply prompt batching. This approach seeks a Pareto-optimal execution path that minimizes either token consumption or latency according to user preference, subject to accuracy constraints. We evaluate Sema on 26 semantic queries across classification, summarization, text extraction, and ranking tasks. Experimental results demonstrate that Sema achieves 2 – 10× speedup against three baseline systems while achieving competitive result quality.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W7135229600",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)",
+      "version_note": "ACDS cited a preprint; linked here to the verified published record.",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "duckdb",
+      "title": "DuckDB: An Embeddable Analytical Database",
+      "year": 2019,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 92,
+          "as_cited": "Raasveldt, M., Mühleisen, H.: Duckdb: an embeddable analytical database. In: SIGMOD Conference, pp. 1981–1984. ACM (2019)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:duckdb",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "abacus",
+      "title": "Abacus: A Cost-Based Optimizer for Semantic Operator Systems",
+      "year": 2026,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 96,
+          "as_cited": "Russo, M., Liu, C., Sudhir, S., Vitagliano, G., Cafarella, M.J., Kraska, T., Madden, S.: Abacus: A cost-based optimizer for semantic operator systems. Proc. VLDB Endow. 19(5), 1060–1073 (2026)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3796195.3796215",
+      "doi": "10.14778/3796195.3796215",
+      "id": "10.14778/3796195.3796215",
+      "url": "https://doi.org/10.14778/3796195.3796215",
+      "pdf_url": "https://www.vldb.org/pvldb/vol19/p1060-russo.pdf",
+      "authors": [
+        "Matthew Russo",
+        "Chunwei Liu",
+        "Sivaprasad Sudhir",
+        "Gerardo Vitagliano",
+        "Michael Cafarella",
+        "Tim Kraska",
+        "Samuel Madden"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://doi.org/10.14778/3796195.3796215",
+        "https://openalex.org/W4417298813",
+        "https://www.vldb.org/pvldb/vol19.html",
+        "https://api.crossref.org/works/10.14778/3796195.3796215"
+      ],
+      "bibliographic": {
+        "volume": "19",
+        "issue": "5",
+        "first_page": "1060",
+        "last_page": "1073"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Cost and Quality Estimation",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Abstract; §1, p1060",
+      "scope_note_zh": "语义算子的物理实现搜索与成本、质量、时延估计，适合作为 Execution 方法参考。",
+      "limitation_zh": "不是 MAS 协作规划工作；旧列表误标 Demo，依据正文更正为 Research。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "LLMs enable an exciting new class of data processing applications over large collections of unstructured documents. Several new programming frameworks have enabled developers to build these applications by composing them out of semantic operators: a declarative set of AI-powered data transformations with natural language specifications. These include LLM-powered maps, filters, joins, etc. used for document processing tasks such as information extraction, summarization, and more. While systems of semantic operators have achieved strong performance on benchmarks, they can be difficult to optimize. An optimizer for this setting must determine how to physically implement each semantic operator in a way that optimizes the system globally. Existing optimizers are limited in the number of optimizations they can apply, and most (if not all) cannot optimize system quality, cost, or latency subject to constraint(s) on the other dimensions. In this paper we present Abacus, an extensible, cost-based optimizer which searches for the best implementation of a semantic operator system given a (possibly constrained) optimization objective. Abacus estimates operator performance by leveraging a minimal set of validation examples, prior beliefs about operator performance, and/or an LLM judge. We evaluate Abacus on document processing workloads in the biomedical and legal domains (BioDEX; CUAD) and multi-modal question answering (MMQA). We demonstrate that, on-average, systems optimized by Abacus achieve 6.7%-39.4% better quality and are 10.8x cheaper and 3.4x faster than the next best system.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4417298813",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "sql_llm",
+      "title": "Logical and Physical Optimizations for SQL Query Execution over Large Language Models",
+      "year": 2025,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 101,
+          "as_cited": "Satriani, D., Veltri, E., Santoro, D., Rosato, S., Varriale, S., Papotti, P.: Logical and physical optimizations for SQL query execution over large language models. Proc. ACM Manag. Data 3(3), 181:1–181:28 (2025)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.1145/3725411",
+      "doi": "10.1145/3725411",
+      "id": "10.1145/3725411",
+      "url": "https://doi.org/10.1145/3725411",
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3725411",
+      "authors": [
+        "Dario Satriani",
+        "Enzo Veltri",
+        "Donatello Santoro",
+        "Sara Rosato",
+        "Simone Varriale",
+        "Paolo Papotti"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W4411403196",
+        "https://api.crossref.org/works/10.1145/3725411"
+      ],
+      "bibliographic": {
+        "volume": "3",
+        "issue": "3",
+        "first_page": "1",
+        "last_page": "28"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "method_reference",
+      "review_location": "Official SIGMOD 2025 abstract",
+      "scope_note_zh": "把 SQL 语义分解为 LLM 执行计划，并研究逻辑/物理优化；可作重写方法参考。",
+      "limitation_zh": "被优化对象是基于 LLM 的查询执行，不是多个协作 agents。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://api.openalex.org/works/W4411403196",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": null,
+      "summary_zh": "把 SQL 语义分解为 LLM 执行计划，并研究逻辑/物理优化；可作重写方法参考。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)"
+    },
+    {
+      "key": "docetl",
+      "title": "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 104,
+          "as_cited": "Shankar, S., Chambers, T., Shah, T., Parameswaran, A.G., Wu, E.: Docetl: Agentic query rewriting and eval- uation for complex document processing. Proc. VLDB Endow. 18(9), 3035–3048 (2025)"
+        },
+        {
+          "seed": "NOMA",
+          "reference_number": 27,
+          "as_cited": "Shreya Shankar, Tristan Chambers, Tarak Shah, Aditya G. Parameswaran, and Eugene Wu. 2025. DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing. Proc. VLDB Endow. 18, 9 (2025), 3035–3048. https: //doi.org/10.14778/3746405.3746426"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3746405.3746426",
+      "doi": "10.14778/3746405.3746426",
+      "id": "10.14778/3746405.3746426",
+      "url": "https://doi.org/10.14778/3746405.3746426",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
+      "authors": [
+        "Shreya Shankar",
+        "Tristan Chambers",
+        "Tarak Shah",
+        "Aditya Parameswaran",
+        "Eugene Wu"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://doi.org/10.14778/3746405.3746426",
+        "https://openalex.org/W4413948895",
+        "https://www.vldb.org/pvldb/vol18.html",
+        "https://api.crossref.org/works/10.14778/3746405.3746426"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "9",
+        "first_page": "3035",
+        "last_page": "3048"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "method_reference",
+      "review_location": "§3–4, pp3038–3042",
+      "scope_note_zh": "文档处理逻辑重写、任务分解和计划评估可借鉴；§4.2 确有 generation / validation agents，但它们用于优化数据处理任务，不能直接算成通用 DB for MAS。",
+      "limitation_zh": "优化数据处理流水线；区分 optimizer 中使用 agents 与被优化对象是多 agent 协作系统。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "Analyzing unstructured data has been a persistent challenge in data processing. Recent proposals offer declarative frameworks for LLM-powered processing of unstructured data, but they typically execute user-specified operations as-is in a single LLM call—focusing on cost rather than accuracy. This is problematic for complex tasks, where even well-prompted LLMs can miss relevant information. For instance, reliably extracting all instances of a specific clause from legal documents often requires decomposing the task, the data, or both. We present DocETL, a system that optimizes complex document processing pipelines, while accounting for LLM shortcomings. DocETL offers a declarative interface for users to deine such pipelines and uses an agent-based approach to automatically optimize them, leveraging novel agent-based rewrites (that we call rewrite directives ), as well as an optimization and evaluation framework. We introduce (i) logical rewriting of pipelines, tailored for LLM-based tasks, (ii) an agent-guided plan evaluation mechanism, and (iii) an optimization algorithm that efficiently finds promising plans, considering the latencies of LLM execution. Across four real-world document processing tasks, DocETL improves accuracy by 21–80% over strong baselines. DocETL is open-source at docetl.org and, as of March 2025, has over 1.7k GitHub stars across diverse domains.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4413948895",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "task_cascades",
+      "title": "Task Cascades for Efficient Unstructured Data Processing",
+      "year": 2026,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 105,
+          "as_cited": "Shankar, S., Zeighami, S., Parameswaran, A.G.: Task cascades for efficient unstructured data processing. CoRR abs/2601.05536 (2026)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.1145/3786702",
+      "doi": "10.1145/3786702",
+      "id": "10.1145/3786702",
+      "url": "https://doi.org/10.1145/3786702",
+      "pdf_url": null,
+      "authors": [
+        "Shreya Shankar",
+        "Sepanta Zeighami",
+        "Aditya Parameswaran"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W7151371621",
+        "https://api.crossref.org/works/10.1145/3786702"
+      ],
+      "bibliographic": {
+        "volume": "4",
+        "issue": "1",
+        "first_page": "1",
+        "last_page": "26"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Published abstract; ACDS §3.2",
+      "scope_note_zh": "为非结构化数据任务选择不同实现/级联的方法参考。",
+      "limitation_zh": "ACDS 引用的是预印本，已关联到 PACMMOD 2026 发表版本；任务级联不是 agent 协作证据。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "Modern database systems allow users to query or process unstructured text or document columns using LLM-powered functions. Users can express an operation in natural language (e.g., ''identify if this review mentions billing issues''), with the system executing the operation on each document, in a row-by-row fashion. One way to reduce cost on a batch of documents is to employ the model cascade framework: a cheap proxy model processes each document, and only uncertain cases are escalated to a more accurate, expensive oracle. However, model cascades miss important optimization opportunities; for example, often only part of a document is needed to answer a query, or other related, but simpler operations (e.g., ''is the review sentiment negative?'', ''does the review mention money?'') can be handled by cheap models more effectively than the original operation, while still being correlated with it. We introduce the task cascades framework, which generalizes model cascades by varying not just the model, but also the document portion and operation at each stage. Our framework uses an LLM agent to generate simplified, decomposed, or otherwise related operations and selects the most relevant document portions, constructing hundreds of candidate tasks from which it assembles a task cascade. We show that optimal cascade selection is intractable via reduction from Minimum Sum Set Cover, but our iterative approach constructs effective cascades. We also provide an extension that offers statistical accuracy guarantees: the resulting cascade meets a user-defined accuracy target (with respect to the oracle) up to a bounded failure probability. Across eight real-world document processing tasks at a 90% target accuracy, task cascades reduce end-to-end cost by an average of 36% compared to model cascades, at a production scale.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W7151371621",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)",
+      "version_note": "ACDS cited a preprint; linked here to the verified published record.",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "f1",
+      "title": "F1: A Distributed SQL Database That Scales",
+      "year": 2013,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 108,
+          "as_cited": "Shute, J., Vingralek, R., Samwel, B., Handy, B., Whip- key, C., Rollins, E., Oancea, M., Littlefield, K., Menest- rina, D., Ellner, S., Cieslewicz, J., Rae, I., Stancescu, T., Apte, H.: F1: A distributed SQL database that scales. Proc. VLDB Endow. 6(11), 1068–1079 (2013)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:f1",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "helium",
+      "title": "Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective",
+      "year": 2026,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 113,
+          "as_cited": "Wadlom, N., Shen, J., Lu, Y.: Efficient LLM serving for agentic workflows: A data systems perspective. CoRR abs/2603.16104 (2026)"
+        },
+        {
+          "seed": "NOMA",
+          "reference_number": 32,
+          "as_cited": "Noppanat Wadlom, Junyi Shen, and Yao Lu. 2026. Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective. Proc. ACM Manag. Data 4, 3 (2026), 169:1–169:29. https://doi.org/10.1145/3802046"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.1145/3802046",
+      "doi": "10.1145/3802046",
+      "id": "10.1145/3802046",
+      "url": "https://doi.org/10.1145/3802046",
+      "pdf_url": "https://arxiv.org/pdf/2603.16104",
+      "authors": [
+        "Noppanat Wadlom",
+        "Junyi Shen",
+        "Yao Lu"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://doi.org/10.1145/3802046",
+        "https://openalex.org/W7161545122",
+        "https://api.crossref.org/works/10.1145/3802046"
+      ],
+      "bibliographic": {
+        "volume": "4",
+        "issue": "3",
+        "first_page": "1",
+        "last_page": "29"
+      },
+      "mas_scope": "direct_mas",
+      "mas_scope_label": "DB for MAS: system / seed proposal",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "direct_mechanism",
+      "review_location": "§4, PDF p4; §7.1, PDF p7; Figure 2",
+      "scope_note_zh": "全文明确包含 Multi-Agent Debate、Multi-Agent Reflection 和专家—汇总者协作。§4 的算子剪枝、公共子图消除和确定性结果替换可支撑 Planning；全篇主条目归 Execution。",
+      "limitation_zh": "同一基座模型、预先给定的 DAG、本地操作；缓存替换仅用于确定性算子或 greedy sampling。并不从自然语言自动发现角色，也不处理任意语义近似合并。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "Agentic workflows are composed of sequences of interdependent Large Language Model (LLM) calls, and they have become a dominant workload in modern AI systems. These workflows exhibit extensive redundancy from overlapping prompts and intermediate results due to speculative and parallel exploration. Existing LLM serving systems, such as vLLM, focus on optimizing individual inference calls and overlook cross-call dependencies, leading to significant inefficiencies. This paper rethinks LLM and agent serving from a data systems perspective and introduces Helium, a workflow-aware serving framework that models agentic workloads as query plans and treats LLM invocations as first-class operators. Helium integrates proactive caching and cache-aware scheduling to maximize reuse across prompts, KV states, and workflows. Through these techniques, Helium bridges classic query optimization principles with LLM serving, achieving up to 1.56× speedup over state-of-the-art agent serving systems on various workloads. Our results demonstrate that end-to-end optimization across workflows is essential for scalable and efficient LLM-based agents.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W7161545122",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research",
+      "version_note": "ACDS cited a preprint; linked here to the verified published record.",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "unify",
+      "title": "Unify: An Unstructured Data Analytics System",
+      "year": 2025,
+      "venue": "ICDE",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 114,
+          "as_cited": "Wang, J., Feng, J.: Unify: An unstructured data analyt- ics system. In: ICDE, pp. 4662–4674. IEEE (2025)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.1109/icde65448.2025.00374",
+      "doi": "10.1109/icde65448.2025.00374",
+      "id": "10.1109/icde65448.2025.00374",
+      "url": "https://doi.org/10.1109/icde65448.2025.00374",
+      "pdf_url": null,
+      "authors": [
+        "Jiayi Wang",
+        "Jianhua Feng"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W4413361381",
+        "https://api.crossref.org/works/10.1109/icde65448.2025.00374"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "first_page": "4662",
+        "last_page": "4674"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "method_reference",
+      "review_location": "Published abstract; ACDS §3.2",
+      "scope_note_zh": "非结构化数据分析与语义查询规划的方法参考。",
+      "limitation_zh": "不能由多步骤查询处理推断 MAS。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://api.openalex.org/works/W4413361381",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": null,
+      "summary_zh": "非结构化数据分析与语义查询规划的方法参考。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)",
+      "publisher_abstract_available": false
+    },
+    {
+      "key": "aop",
+      "title": "AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries",
+      "year": 2025,
+      "venue": "CIDR",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 115,
+          "as_cited": "Wang, J., Li, G.: AOP: automated and interactive LLM pipeline orchestration for answering complex queries. In: CIDR. www.cidrdb.org (2025)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/cidrdb/2025/aop-automated-and-interactive-llm-pipeline-orchestration-for-answering-complex-queries.html",
+      "doi": null,
+      "url": "https://www.vldb.org/cidrdb/2025/aop-automated-and-interactive-llm-pipeline-orchestration-for-answering-complex-queries.html",
+      "pdf_url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
+      "authors": [
+        "Jiayi Wang",
+        "Guoliang Li"
+      ],
+      "collection_group": "recent_cidr",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/cidrdb/2025/aop-automated-and-interactive-llm-pipeline-orchestration-for-answering-complex-queries.html"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "method_reference",
+      "review_location": "§4.1–4.2, pp7–8",
+      "scope_note_zh": "把复杂查询分解为语义算子，生成链、改写为 DAG 并整合多个候选；可借鉴计划表示与重写方法。",
+      "limitation_zh": "正文描述多次 LLM 调用及算子流水线；未据此认定为多 agent 协作系统。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "Current data lakes are limited to basic put/get functions on unstructured data and analytical queries on structured data. They fall short in handling complex queries that require multi-hop semantic retrieval and linking, multi-step logical reasoning, and multi-stage semantic analytics across unstructured, semi-structured, and structured data in data lakes. The introduction of large language models (LLMs) has significantly transformed the landscape of traditional data search and analytics across different fields due to their semantic comprehension and reasoning skills. Utilizing LLMs opens up new opportunities to efficiently handle these complex queries for data search and analytics, spanning structured, semi-structured, and unstructured data types in data lakes. However, LLMs struggle with complex queries that require complex task decomposition, pipeline orchestration, pipeline optimization, interactive execution, and self-reflection. In this work, we propose AOP, the first systematic system for automated pipeline orchestration in LLMs for answering complex queries on data lakes. AOP pre-defines standard semantic operators crucial for building execution workflows, such as semantic retrieval, filtering, aggregation, and validation. Then given an online query, AOP extracts relevant operators and uses these operators to automatically and interactively compose optimized pipelines with the assistance of LLMs. This enables AOP to adaptively and accurately address diverse and complex queries on data lakes. To further improve efficiency, we introduce query optimization techniques, including prefetching and parallel execution, to enhance overall efficiency without sacrificing accuracy. Through extensive experiments on real-world datasets, we demonstrate that AOP significantly improves the accuracy for answering complex queries. For instance, on a challenging test set, AOP increases answer accuracy by 45%.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://www.vldb.org/cidrdb/2025/aop-automated-and-interactive-llm-pipeline-orchestration-for-answering-complex-queries.html",
+      "abstract_version": "CIDR official proceedings abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research"
+    },
+    {
+      "key": "milvus",
+      "title": "Milvus: A Purpose-Built Vector Data Management System",
+      "year": 2021,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 117,
+          "as_cited": "Wang, J., Yi, X., Guo, R., Jin, H., Xu, P., Li, S., Wang, X., Guo, X., Li, C., Xu, X., Yu, K., Yuan, Y., Zou, Y., Long, J., Cai, Y., Li, Z., Zhang, Z., Mo, Y., Gu, J., Jiang, R., Wei, Y., Xie, C.: Milvus: A purpose-built vector data management system. In: SIGMOD Conference, pp. 2614–2627. ACM (2021)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:milvus",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "bridgescope",
+      "title": "BridgeScope: A Universal Toolkit for Bridging Large Language Models and Databases",
+      "year": 2026,
+      "venue": "CIDR",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 121,
+          "as_cited": "Weng, L., Liu, D., Zhu, R., Ding, B., Zhou, J.: Bridgescope: A universal toolkit for bridging large language models and databases. In: CIDR. www.cidrdb.org (2026)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/cidrdb/2026/bridgescope-a-universal-toolkit-for-bridging-large-language-models-and-databases.html",
+      "doi": null,
+      "url": "https://www.vldb.org/cidrdb/2026/bridgescope-a-universal-toolkit-for-bridging-large-language-models-and-databases.html",
+      "pdf_url": "https://www.vldb.org/cidrdb/papers/2026/p4-weng.pdf",
+      "authors": [
+        "Lianggui Weng",
+        "Dandan Liu",
+        "Rong Zhu",
+        "Bolin Ding",
+        "Jingren Zhou"
+      ],
+      "collection_group": "recent_cidr",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/cidrdb/2026/bridgescope-a-universal-toolkit-for-bridging-large-language-models-and-databases.html"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "agent_support_not_mas",
+      "mas_scope_label": "Agent support; MAS not established",
+      "primary_layer": "Data Interface",
+      "primary_topic": null,
+      "planning_relevance": "constraint_reference",
+      "review_location": "§2–3; ACDS §3.3",
+      "scope_note_zh": "工具与数据库权限对齐可为规划提供可行性约束。",
+      "limitation_zh": "改进 agent–database 接口，但当前核对没有建立多 agent 协作优化的证据。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "As large language models (LLMs) demonstrate increasingly powerful reasoning and orchestration capabilities, LLM-based agents are rapidly adopted for complex data-related tasks. Despite this progress, the current design of how LLMs interact with databases exhibits critical limitations in usability, security, privilege management, and data transmission efficiency. To address these challenges, we introduce BridgeScope, a universal toolkit that bridges LLMs and databases through three key innovations. First, it modularizes SQL operations into fine-grained tools for context retrieval, CRUD execution, and ACID-compliant transaction management. This design enables more precise, LLM-friendly controls over database functionality. Second, it aligns tool implementations with database privileges and user-defined security policies to steer LLMs away from unsafe or unauthorized operations, which not only safeguards database security but also enhances task execution efficiency by enabling early identification and termination of infeasible tasks. Third, it introduces a proxy mechanism that supports seamless data transfer between tools, thereby bypassing the transmission bottlenecks via LLMs. All of these designs are database-agnostic and can be transparently integrated with existing agent architectures. We also release an open-source implementation of BridgeScope for PostgreSQL. Evaluations on two novel benchmarks demonstrate that BridgeScope enables LLM agents to interact with databases more effectively. It reduces token usage by up to 80% through improved security awareness and uniquely supports data-intensive workflows beyond existing toolkits. These results establish BridgeScope as a robust foundation for next-generation intelligent data automation.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://www.vldb.org/cidrdb/2026/bridgescope-a-universal-toolkit-for-bridging-large-language-models-and-databases.html",
+      "abstract_version": "CIDR official proceedings abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research"
+    },
+    {
+      "key": "druid",
+      "title": "Druid: A Real-time Analytical Data Store",
+      "year": 2014,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 128,
+          "as_cited": "Yang, F., Tschetter, E., Léauté, X., Ray, N., Merlino, G., Ganguli, D.: Druid: a real-time analytical data store. In: SIGMOD Conference, pp. 157–168. ACM (2014)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:druid",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "gstore",
+      "title": "gStore: Answering SPARQL Queries via Subgraph Matching",
+      "year": 2011,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "ACDS",
+          "reference_number": 149,
+          "as_cited": "Zou, L., Mo, J., Chen, L., Özsu, M.T., Zhao, D.: gstore: Answering SPARQL queries via subgraph matching. Proc. VLDB Endow. 4(8), 482–493 (2011)"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:gstore",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "rheem",
+      "title": "RHEEM: Enabling Cross-Platform Data Processing - May The Big Data Be With You!",
+      "year": 2018,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 1,
+          "as_cited": "Divy Agrawal, Sanjay Chawla, Bertty Contreras-Rojas, Ahmed K. Elmagarmid, Yasser Idris, Zoi Kaoudi, Sebastian Kruse, Ji Lucas, Essam Mansour, Mourad Ouzzani, Paolo Papotti, Jorge-Arnulfo Quiané-Ruiz, Nan Tang, Saravanan Thiru- muruganathan, and Anis Troudi. 2018. RHEEM: Enabling Cross-Platform Data Processing - May The Big Data Be With You! -. Proc. VLDB Endow. 11, 11 (2018), 1414–1427."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:rheem",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "wayang",
+      "title": "Apache Wayang: A Unified Data Analytics Framework",
+      "year": 2023,
+      "venue": "SIGMOD Record",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 4,
+          "as_cited": "Kaustubh Beedkar, Bertty Contreras-Rojas, Haralampos Gavriilidis, Zoi Kaoudi, Volker Markl, Rodrigo Pardo-Meza, and Jorge-Arnulfo Quiané-Ruiz. 2023. Apache Wayang: A Unified Data Analytics Framework. SIGMOD Rec. 52, 3 (2023), 30–35."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:wayang",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "journal_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "semantic_cache",
+      "title": "Semantic Data Caching and Replacement",
+      "year": 1996,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 8,
+          "as_cited": "Shaul Dar, Michael J. Franklin, Björn Þór Jónsson, Divesh Srivastava, and Michael Tan. 1996. Semantic Data Caching and Replacement. In Proceedings of 22th International Conference on Very Large Data Bases, VLDB’96. 330–341."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/conf/1996/P330.PDF",
+      "doi": null,
+      "url": "https://www.vldb.org/conf/1996/P330.PDF",
+      "pdf_url": "https://www.vldb.org/conf/1996/P330.PDF",
+      "authors": [
+        "Shaul Dar",
+        "Michael J. Franklin",
+        "Björn Þór Jónsson",
+        "Divesh Srivastava",
+        "Michael Tan"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/conf/1996/P330.PDF"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://www.vldb.org/conf/1996/P330.PDF",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "adaptive_qp",
+      "title": "Adaptive Query Processing",
+      "year": 2007,
+      "venue": "Foundations and Trends in Databases",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 9,
+          "as_cited": "Amol Deshpande, Zachary G. Ives, and Vijayshankar Raman. 2007. Adaptive Query Processing. Foundations and Trends in Databases 1, 1 (2007), 1–140."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:adaptive_qp",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "journal_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "bigdata",
+      "title": "Mix 'n' Match Multi-Engine Analytics",
+      "year": 2016,
+      "venue": "IEEE BigData",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 10,
+          "as_cited": "Katerina Doka, Nikolaos Papailiou, Victor Giannakouris, Dimitrios Tsoumakos, and Nectarios Koziris. 2016. Mix ’n’ match multi-engine analytics. In 2016 IEEE International Conference on Big Data (IEEE BigData 2016). 194–203. https: //doi.org/10.1109/BIGDATA.2016.7840605"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1109/bigdata.2016.7840605",
+      "id": "10.1109/bigdata.2016.7840605",
+      "url": "https://doi.org/10.1109/bigdata.2016.7840605",
+      "pdf_url": null,
+      "authors": [
+        "Katerina Doka",
+        "Nikolaos Papailiou",
+        "Victor Giannakouris",
+        "Dimitrios Tsoumakos",
+        "Nectarios Koziris"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1109/bigdata.2016.7840605"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": "194-203"
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://doi.org/10.1109/bigdata.2016.7840605",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": false
+    },
+    {
+      "key": "quacking",
+      "title": "Beyond Quacking: Deep Integration of Language Models and RAG into DuckDB",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 11,
+          "as_cited": "Anas Dorbani, Sunny Yasser, Jimmy Lin, and Amine Mhedhbi. 2025. Beyond Quacking: Deep Integration of Language Models and RAG into DuckDB. Proc. VLDB Endow. 18, 12 (2025), 5415–5418. https://doi.org/10.14778/3750601.3750685"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3750601.3750685",
+      "doi": "10.14778/3750601.3750685",
+      "id": "10.14778/3750601.3750685",
+      "url": "https://doi.org/10.14778/3750601.3750685",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p5415-mhedhbi.pdf",
+      "authors": [
+        "Anas Dorbani",
+        "Sunny Yasser",
+        "Jimmy Lin",
+        "Amine Mhedhbi"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W4414266922",
+        "https://www.vldb.org/pvldb/vol18.html",
+        "https://api.crossref.org/works/10.14778/3750601.3750685"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "12",
+        "first_page": "5415",
+        "last_page": "5418"
+      },
+      "mas_scope": "background_only",
+      "mas_scope_label": "Background only",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Published abstract",
+      "scope_note_zh": "DuckDB 与 LLM/RAG 集成背景。",
+      "limitation_zh": "Demo；不计入 DB for MAS 核心。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "Knowledge-intensive analytical applications retrieve context from both structured tabular data and unstructured free text documents for effective decision-making. Large language models (LLMs) have significantly simplified the prototyping of such retrieval and reasoning data pipelines. However, implementing them efficiently remains challenging and demands significant effort. Developers must often orchestrate heterogeneous systems, manage data movement, and handle low-level concerns such as LLM context management. To address these challenges, we introduce FlockMTL: an extension for DBMSs that integrates LLM capabilities and enables retrieval-augmented generation (RAG) within SQL. FlockMTL provides LLM-powered scalar and aggregate functions, enabling chained predictions over tuples. It further provides data fusion functions to support hybrid search. Drawing inspiration from the relational model, FlockMTL incorporates: (i) seamless optimizations such as batching and meta-prompting; and (ii) resource independence through novel SQL DDL abstractions: PROMPT and MODEL, introduced as first-class schema objects alongside TABLE.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4414266922",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Demo",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "cost_tutorial",
+      "title": "Learned Cost Models for Query Optimization: From Batch to Streaming Systems",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 14,
+          "as_cited": "Roman Heinrich, Xiao Li, Manisha Luthra, and Zoi Kaoudi. 2025. Learned Cost Models for Query Optimization: From Batch to Streaming Systems. Proc. VLDB Endow. 18, 12 (2025), 5482–5487. https://doi.org/10.14778/3750601.3750699"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.14778/3750601.3750699",
+      "id": "10.14778/3750601.3750699",
+      "url": "https://www.vldb.org/pvldb/vol18/p5482-li.pdf",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p5482-li.pdf",
+      "authors": [
+        "Roman Heinrich",
+        "Xiao Li",
+        "Manisha Luthra",
+        "Zoi Kaoudi"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/pvldb/vol18/p5482-li.pdf",
+        "https://api.crossref.org/works/10.14778/3750601.3750699"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "12",
+        "page": "5482-5487"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Cost and Quality Estimation",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Abstract; NOMA §5.2",
+      "scope_note_zh": "批处理/流处理 learned cost models 教程；支撑成本模型研究。",
+      "limitation_zh": "Tutorial，不是 MAS 实验论文。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "Learned cost models (LCMs) have recently gained traction as a promising alternative to traditional cost estimation techniques in data management, offering improved accuracy by capturing complex interactions between queries, data, and runtime behavior. While initially developed for batch systems, LCMs are now increasingly applied to stream processing as well, where real-time demands pose new challenges. This tutorial presents the first unified overview of LCMs across both batch and stream processing systems, examining their role as essential components in modern query optimizers. We explore key aspects of LCM design—including input representations and model architectures—and highlight how these models deal with query optimization tasks.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.crossref.org/works/10.14778/3750601.3750699",
+      "abstract_version": "Publisher-deposited abstract (Crossref), matched to official PDF",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Tutorial",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "cost_quality",
+      "title": "How Good are Learned Cost Models, Really? Insights from Query Optimization Tasks",
+      "year": 2025,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 15,
+          "as_cited": "Roman Heinrich, Manisha Luthra, Johannes Wehrstein, Harald Kornmayer, and Carsten Binnig. 2025. How Good are Learned Cost Models, Really? Insights from Query Optimization Tasks. Proc. ACM Manag. Data 3, 3 (2025), 172:1–172:27. https://doi.org/10.1145/3725309"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1145/3725309",
+      "id": "10.1145/3725309",
+      "url": "https://doi.org/10.1145/3725309",
+      "pdf_url": null,
+      "authors": [
+        "Roman Heinrich",
+        "Manisha Luthra",
+        "Johannes Wehrstein",
+        "Harald Kornmayer",
+        "Carsten Binnig"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1145/3725309"
+      ],
+      "bibliographic": {
+        "volume": "3",
+        "issue": "3",
+        "page": "1-27"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Cost and Quality Estimation",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Publisher-deposited abstract",
+      "scope_note_zh": "检查 learned cost models 是否真的改善计划选择，可借鉴优化器的评价方法。",
+      "limitation_zh": "研究 SQL join/access path/physical operator selection，不是 MAS。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://doi.org/10.1145/3725309",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "检查 learned cost models 是否真的改善计划选择，可借鉴优化器的评价方法。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "thalamus",
+      "title": "ThalamusDB: Approximate Query Processing on Multi-Modal Data",
+      "year": 2024,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 16,
+          "as_cited": "Saehan Jo and Immanuel Trummer. 2024. ThalamusDB: Approximate Query Processing on Multi-Modal Data. Proc. ACM Manag. Data 2, 3 (2024), 186. https: //doi.org/10.1145/3654989"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.1145/3654989",
+      "doi": "10.1145/3654989",
+      "id": "10.1145/3654989",
+      "url": "https://doi.org/10.1145/3654989",
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3654989",
+      "authors": [
+        "Saehan Jo",
+        "Immanuel Trummer"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W4399174722",
+        "https://api.crossref.org/works/10.1145/3654989"
+      ],
+      "bibliographic": {
+        "volume": "2",
+        "issue": "3",
+        "first_page": "1",
+        "last_page": "26"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Cost and Quality Estimation",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Published abstract; NOMA related work",
+      "scope_note_zh": "多模态近似查询处理的成本/质量权衡，可作执行优化参考。",
+      "limitation_zh": "不是已确认的多 agent 协作系统。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://api.openalex.org/works/W4399174722",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "rheemix",
+      "title": "RHEEMix in the Data Jungle: A Cost-based Optimizer for Cross-platform Systems",
+      "year": 2020,
+      "venue": "VLDB Journal",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 17,
+          "as_cited": "Sebastian Kruse, Zoi Kaoudi, Bertty Contreras-Rojas, Sanjay Chawla, Felix Nau- mann, and Jorge-Arnulfo Quiané-Ruiz. 2020. RHEEMix in the data jungle: a cost-based optimizer for cross-platform systems. VLDB J. 29, 6 (2020), 1287–1310."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "10.1007/s00778-020-00612-x",
+      "doi": "10.1007/s00778-020-00612-x",
+      "url": "https://doi.org/10.1007/s00778-020-00612-x",
+      "pdf_url": null,
+      "authors": [
+        "Sebastian Kruse",
+        "Zoi Kaoudi",
+        "Bertty Contreras-Rojas",
+        "Sanjay Chawla",
+        "Felix Naumann",
+        "Jorge-Arnulfo Quiané-Ruiz"
+      ],
+      "collection_group": "journal_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1007/s00778-020-00612-x"
+      ],
+      "bibliographic": {
+        "volume": "29",
+        "issue": "6",
+        "page": "1287-1310"
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://doi.org/10.1007/s00778-020-00612-x",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "dm_ml",
+      "title": "Data Management in Machine Learning: Challenges, Techniques, and Systems",
+      "year": 2017,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 18,
+          "as_cited": "Arun Kumar, Matthias Boehm, and Jun Yang. 2017. Data Management in Machine Learning: Challenges, Techniques, and Systems. In Proceedings of the 2017 ACM International Conference on Management of Data, SIGMOD Conference 2017. ACM, 1717–1722. https://doi.org/10.1145/3035918.3054775"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1145/3035918.3054775",
+      "id": "10.1145/3035918.3054775",
+      "url": "https://doi.org/10.1145/3035918.3054775",
+      "pdf_url": null,
+      "authors": [
+        "Arun Kumar",
+        "Matthias Boehm",
+        "Jun Yang"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1145/3035918.3054775"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": "1717-1722"
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://doi.org/10.1145/3035918.3054775",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": false
+    },
+    {
+      "key": "conformal",
+      "title": "Conformal Prediction for Verifiable Learned Query Optimization",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 21,
+          "as_cited": "Hanwen Liu, Shashank Giridhara, and Ibrahim Sabek. 2025. Conformal Prediction for Verifiable Learned Query Optimization. Proc. VLDB Endow. 18, 8 (2025), 2653– 2666."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "10.14778/3742728.3742755",
+      "doi": "10.14778/3742728.3742755",
+      "url": "https://www.vldb.org/pvldb/vol18/p2653-liu.pdf",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p2653-liu.pdf",
+      "authors": [
+        "Hanwen Liu",
+        "Shashank Giridhara",
+        "Ibrahim Sabek"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/pvldb/vol18/p2653-liu.pdf",
+        "https://api.crossref.org/works/10.14778/3742728.3742755"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "8",
+        "page": "2653-2666"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Cost and Quality Estimation",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Abstract; NOMA §5.2",
+      "scope_note_zh": "为学习型查询优化器的时延估计提供不确定性校准与执行前验证。",
+      "limitation_zh": "SQL 计划时延的保证，不能直接转成 MAS 任务质量保证。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "Query optimization is critical in relational databases. Recently, numerous Learned Query Optimizers (LQOs) have been proposed, demonstrating superior performance over traditional hand-crafted query optimizers after short training periods. However, the opacity and instability of machine learning models have limited their practical applications. To address this issue, we are the first to formulate the LQO verification as a Conformal Prediction (CP) problem. We first construct a CP model and obtain user-controlled bounded ranges for the actual latency of LQO plans before execution. Then, we introduce CP-based runtime verification along with violation handling to ensure performance prior to execution. For both scenarios, we further extend our framework to handle distribution shifts in the dynamic environment using adaptive CP approaches. Finally, we present CP-guided plan search, which uses actual latency upper bounds from CP to heuristically guide query plan construction. We integrated our verification framework into three LQOs (Balsa, Lero, and RTOS) and conducted evaluations on several workloads. Experimental results demonstrate that our method is both accurate and efficient. Our CP-based approaches achieve tight upper bounds, reliably detect and handle violations. Adaptive CP maintains accurate confidence levels even in the presence of distribution shifts, and the CP-guided plan search improves both query plan quality (up to 9.84x) and planning time, with a reduction of up to 74.4% for a single query and 9.96% across all test queries from trained LQOs.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.crossref.org/works/10.14778/3742728.3742755",
+      "abstract_version": "Publisher-deposited abstract (Crossref), matched to official PDF",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "progressive",
+      "title": "Robust Query Processing through Progressive Optimization",
+      "year": 2004,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 22,
+          "as_cited": "Volker Markl, Vijayshankar Raman, David E. Simmen, Guy M. Lohman, and Hamid Pirahesh. 2004. Robust Query Processing through Progressive Optimiza- tion. In Proceedings of the ACM SIGMOD International Conference on Management of Data. 659–670. https://doi.org/10.1145/1007568.1007642"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1145/1007568.1007642",
+      "id": "10.1145/1007568.1007642",
+      "url": "https://doi.org/10.1145/1007568.1007642",
+      "pdf_url": null,
+      "authors": [
+        "Volker Markl",
+        "Vijayshankar Raman",
+        "David Simmen",
+        "Guy Lohman",
+        "Hamid Pirahesh",
+        "Miso Cilimdzic"
+      ],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1145/1007568.1007642"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": "659-670"
+      },
+      "mas_scope": "historical_foundation",
+      "mas_scope_label": "Historical foundation",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "historical_method",
+      "review_location": "NOMA §5.3",
+      "scope_note_zh": "渐进式查询重优化是 NOMA 运行时调整的数据库前身。",
+      "limitation_zh": "2004；不计入最近三年 MAS 论文。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://doi.org/10.1145/1007568.1007642",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "渐进式查询重优化是 NOMA 运行时调整的数据库前身。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": false
+    },
+    {
+      "key": "assisted_ds",
+      "title": "Assisted Design of Data Science Pipelines",
+      "year": 2024,
+      "venue": "VLDB Journal",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 25,
+          "as_cited": "Sergey Redyuk, Zoi Kaoudi, Sebastian Schelter, and Volker Markl. 2024. Assisted design of data science pipelines. VLDB J. 33, 4 (2024), 1129–1153. https://doi. org/10.1007/S00778-024-00835-2"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1007/s00778-024-00835-2",
+      "id": "10.1007/s00778-024-00835-2",
+      "url": "https://doi.org/10.1007/s00778-024-00835-2",
+      "pdf_url": null,
+      "authors": [
+        "Sergey Redyuk",
+        "Zoi Kaoudi",
+        "Sebastian Schelter",
+        "Volker Markl"
+      ],
+      "collection_group": "journal_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1007/s00778-024-00835-2"
+      ],
+      "bibliographic": {
+        "volume": "33",
+        "issue": "4",
+        "page": "1129-1153"
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "source_link_only",
+      "abstract_source": "https://doi.org/10.1007/s00778-024-00835-2",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "sqlstorm",
+      "title": "SQLStorm: Taking Database Benchmarking into the LLM Era",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 26,
+          "as_cited": "Tobias Schmidt, Viktor Leis, Peter Boncz, and Thomas Neumann. 2025. SQLStorm: Taking Database Benchmarking into the LLM Era. Proc. VLDB Endow. 18, 11 (2025), 4144–4157. https://doi.org/10.14778/3749646.3749683"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3749646.3749683",
+      "doi": "10.14778/3749646.3749683",
+      "id": "10.14778/3749646.3749683",
+      "url": "https://doi.org/10.14778/3749646.3749683",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p4144-schmidt.pdf",
+      "authors": [
+        "Tobias Schmidt",
+        "Leis Viktor",
+        "Peter Boncz",
+        "Thomas Neumann"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W4413978115",
+        "https://www.vldb.org/pvldb/vol18.html",
+        "https://api.crossref.org/works/10.14778/3749646.3749683"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "11",
+        "first_page": "4144",
+        "last_page": "4157"
+      },
+      "mas_scope": "background_only",
+      "mas_scope_label": "Background only",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Published abstract",
+      "scope_note_zh": "SQL/LLM 查询基准背景。",
+      "limitation_zh": "数据库基准工作，不是 MAS 规划机制。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "In this paper, we introduce a new methodology for constructing database benchmarks using Large Language Models (LLMs), as well as SQLStorm v1.0, a concrete benchmark on a real-world dataset of three sizes (1 GB, 12 GB, 220 GB) consisting of over 18 K queries. This methodology of using AI to generate query workloads breaks new ground, not only in its ability to cheaply ($15) generate huge volumes (22 MB) of realistic queries but especially because it greatly expands the amount of SQL functionality and query constructions that is covered, compared to human-written SQL benchmarks such as TPC-H, TPC-DS, and JOB. The use cases of SQLStorm that we think will advance data systems most are: (i) improving SQL compatibility between systems, (ii) increasing system quality by identifying crashes/errors and fixing those, (iii) improving cardinality estimators and query optimizers, by identifying trends and opportunities (queries where other systems do much better), as well as (iv) overall system performance, both in terms of speed and robustness.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4413978115",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research / Industry (待核)",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "crossengine",
+      "title": "A Learned Cost Model-based Cross-engine Optimizer for SQL Workloads",
+      "year": 2025,
+      "venue": "VLDB Workshop",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 28,
+          "as_cited": "András Strausz, Niels Pardon, and Ioana Giurgiu. 2025. A Learned Cost Model- based Cross-engine Optimizer for SQL Workloads. In Proceedings of Workshops at the 51st International Conference on Very Large Data Bases."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/CDMS/CDMS25_06.pdf",
+      "doi": null,
+      "url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/CDMS/CDMS25_06.pdf",
+      "pdf_url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/CDMS/CDMS25_06.pdf",
+      "authors": [
+        "András Strausz",
+        "Niels Pardon",
+        "Ioana Giurgiu"
+      ],
+      "collection_group": "recent_workshop",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/CDMS/CDMS25_06.pdf"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Cost and Quality Estimation",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Abstract; NOMA §2",
+      "scope_note_zh": "在多数据库执行引擎间进行成本预测和查询路由。",
+      "limitation_zh": "CDMS@VLDB 2025 workshop；多 engine 不等于多 agent。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/CDMS/CDMS25_06.pdf",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "在多数据库执行引擎间进行成本预测和查询路由。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Workshop / Research"
+    },
+    {
+      "key": "genjoin",
+      "title": "GenJoin: Conditional Generative Plan-to-Plan Query Optimizer that Learns from Subplan Hints",
+      "year": 2025,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 29,
+          "as_cited": "Pavel Sulimov, Claude Lehmann, and Kurt Stockinger. 2025. GenJoin: Conditional Generative Plan-to-Plan Query Optimizer that Learns from Subplan Hints. Proc. ACM Manag. Data 3, 4 (2025), 247:1–247:25. https://doi.org/10.1145/3749165"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1145/3749165",
+      "id": "10.1145/3749165",
+      "url": "https://doi.org/10.1145/3749165",
+      "pdf_url": null,
+      "authors": [
+        "Pavel Sulimov",
+        "Claude Lehmann",
+        "Kurt Stockinger"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1145/3749165"
+      ],
+      "bibliographic": {
+        "volume": "3",
+        "issue": "4",
+        "page": "1-25"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Publisher-deposited abstract; NOMA §5.1",
+      "scope_note_zh": "用条件生成模型从子计划 hints 搜索 SQL 计划；NOMA 借鉴其生成式搜索思路。",
+      "limitation_zh": "2025 发表、SIGMOD 2026 周期；不是 MAS 拓扑优化的实证。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://doi.org/10.1145/3749165",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "用条件生成模型从子计划 hints 搜索 SQL 计划；NOMA 借鉴其生成式搜索思路。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "bayesopt",
+      "title": "Learned Offline Query Planning via Bayesian Optimization",
+      "year": 2025,
+      "venue": "SIGMOD",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 31,
+          "as_cited": "Jeffrey Tao, Natalie Maus, Haydn Thomas Jones, Yimeng Zeng, Jacob R. Gard- ner, and Ryan Marcus. 2025. Learned Offline Query Planning via Bayesian Optimization. Proc. ACM Manag. Data 3, 3 (2025), 179:1–179:29. https: //doi.org/10.1145/3725316"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.1145/3725316",
+      "id": "10.1145/3725316",
+      "url": "https://doi.org/10.1145/3725316",
+      "pdf_url": null,
+      "authors": [
+        "Jeffrey Tao",
+        "Natalie Maus",
+        "Haydn Jones",
+        "Yimeng Zeng",
+        "Jacob R. Gardner",
+        "Ryan Marcus"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://api.crossref.org/works/10.1145/3725316"
+      ],
+      "bibliographic": {
+        "volume": "3",
+        "issue": "3",
+        "page": "1-29"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Publisher-deposited abstract; NOMA §5.3",
+      "scope_note_zh": "结合执行反馈和 Bayesian optimization 搜索离线 SQL 计划。",
+      "limitation_zh": "不能直接当作 MAS 逻辑任务分解。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://doi.org/10.1145/3725316",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "结合执行反馈和 Bayesian optimization 搜索离线 SQL 计划。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "contextcache",
+      "title": "ContextCache: Context-Aware Semantic Cache for Multi-Turn Queries in Large Language Models",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 33,
+          "as_cited": "Jianxin Yan, Wangze Ni, Lei Chen, Xuemin Lin, Peng Cheng, Zhan Qin, and Kui Ren. 2025. ContextCache: Context-Aware Semantic Cache for Multi-Turn Queries in Large Language Models. Proc. VLDB Endow. 18, 12 (2025), 5391–5394. https://doi.org/10.14778/3750601.3750679"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": "10.14778/3750601.3750679",
+      "doi": "10.14778/3750601.3750679",
+      "id": "10.14778/3750601.3750679",
+      "url": "https://doi.org/10.14778/3750601.3750679",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p5391-yan.pdf",
+      "authors": [
+        "Jianxin Yan",
+        "Wangze Ni",
+        "Lei Chen",
+        "Xuemin Lin",
+        "Peng Cheng",
+        "Zhan Qin",
+        "Kui Ren"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W4414243320",
+        "https://www.vldb.org/pvldb/vol18.html",
+        "https://api.crossref.org/works/10.14778/3750601.3750679"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "12",
+        "first_page": "5391",
+        "last_page": "5394"
+      },
+      "mas_scope": "agent_support_not_mas",
+      "mas_scope_label": "Agent support; MAS not established",
+      "primary_layer": "Memory",
+      "primary_topic": "Semantic Caching",
+      "planning_relevance": null,
+      "review_location": "Published abstract",
+      "scope_note_zh": "多轮 LLM 查询的上下文语义缓存，可借鉴缓存机制。",
+      "limitation_zh": "多轮对话不是多个 agents；Demo。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "Semantic caching significantly reduces computational costs and improves efficiency by storing and reusing large language model (LLM) responses. However, existing systems rely primarily on matching individual queries, lacking awareness of multi-turn dialogue contexts, which leads to incorrect cache hits when similar queries appear in different conversational settings. This demonstration introduces ContextCache, a context-aware semantic caching system for multi-turn dialogues. ContextCache employs a two-stage retrieval architecture that first executes vector-based retrieval on the current query to identify potential matches and then integrates current and historical dialogue representations through self-attention mechanisms for precise contextual matching. Evaluation of real-world conversations shows that ContextCache improves precision and recall compared to existing methods. Additionally, cached responses exhibit approximately 10 times lower latency than direct LLM invocation, enabling significant computational cost reductions for LLM conversational applications.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4414243320",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Demo",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "limao",
+      "title": "LIMAO: A Framework for Lifelong Modular Learned Query Optimization",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 34,
+          "as_cited": "Qihan Zhang, Shaolin Xie, and Ibrahim Sabek. 2025. LIMAO: A Framework for Lifelong Modular Learned Query Optimization. Proc. VLDB Endow. 18, 11 (2025), 4546–4559. https://doi.org/10.14778/3749646.3749712"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "doi": "10.14778/3749646.3749712",
+      "id": "10.14778/3749646.3749712",
+      "url": "https://www.vldb.org/pvldb/vol18/p4546-zhang.pdf",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p4546-zhang.pdf",
+      "authors": [
+        "Qihan Zhang",
+        "Shaolin Xie",
+        "Ibrahim Sabek"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/pvldb/vol18/p4546-zhang.pdf",
+        "https://api.crossref.org/works/10.14778/3749646.3749712"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "11",
+        "page": "4546-4559"
+      },
+      "mas_scope": "transferable_method",
+      "mas_scope_label": "Transferable method; not MAS evidence",
+      "primary_layer": "Execution",
+      "primary_topic": "Cost and Quality Estimation",
+      "planning_relevance": "boundary_reference",
+      "review_location": "Abstract; NOMA §5.3",
+      "scope_note_zh": "学习型 SQL 优化器的持续学习、工作负载适应与灾难性遗忘处理。",
+      "limitation_zh": "动态工作负载并不等同于多 agent 协作。",
+      "review_depth": "abstract_and_metadata",
+      "human_read": false,
+      "abstract": "Query optimizers are crucial for the performance of database systems. Recently, many learned query optimizers (LQOs) have demonstrated significant performance improvements over traditional optimizers. However, most of them operate under a limited assumption: a static query environment. This limitation prevents them from effectively handling complex, dynamic query environments in real-world scenarios. Extensive retraining can lead to the well-known catastrophic forgetting problem which reduces the LQO generalizability over time. In this paper, we address this limitation and introduce LIMAO (Lifelong Modular Learned Query Optimizer), a framework for lifelong learning of plan cost prediction that can be seamlessly integrated into existing LQOs. LIMAO leverages a modular lifelong learning technique, an attention-based neural network composition architecture, and an efficient training paradigm designed to retain prior knowledge while continuously adapting to new environments. We implement LIMAO in two LQOs, showing that our approach is agnostic to underlying engines. Experimental results show that LIMAO significantly enhances the performance of LQOs, achieving up to a 40% improvement in query execution time and reducing the variance of execution time by up to 60% under dynamic workloads. By leveraging a precise and self-consistent design, LIMAO effectively mitigates catastrophic forgetting, ensuring stable and reliable plan quality over time. Compared to Postgres, LIMAO achieves up to a 4× speedup on selected benchmarks, highlighting its practical advantages in real-world query optimization.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.crossref.org/works/10.14778/3749646.3749712",
+      "abstract_version": "Publisher-deposited abstract (Crossref), matched to official PDF",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Research",
+      "publisher_abstract_available": true
+    },
+    {
+      "key": "rag_agentic",
+      "title": "Towards the Next Generation of Agent Systems: From RAG to Agentic AI",
+      "year": 2025,
+      "venue": "VLDB Workshop",
+      "cited_by": [
+        {
+          "seed": "NOMA",
+          "reference_number": 35,
+          "as_cited": "Yingli Zhou and Shu Wang. 2025. Towards the Next Generation of Agent Sys- tems: From RAG to Agentic AI [Vision]. In Proceedings of Workshops at the 51st International Conference on Very Large Data Bases. 52"
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/LLM%2BGraph/LLMGraph-8.pdf",
+      "doi": null,
+      "url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/LLM%2BGraph/LLMGraph-8.pdf",
+      "pdf_url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/LLM%2BGraph/LLMGraph-8.pdf",
+      "authors": [
+        "Yingli Zhou",
+        "Shu Wang"
+      ],
+      "collection_group": "recent_workshop",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/LLM%2BGraph/LLMGraph-8.pdf"
+      ],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "mas_vision",
+      "mas_scope_label": "DB for MAS: vision",
+      "primary_layer": "Planning",
+      "primary_topic": "Task Decomposition and Merge",
+      "planning_relevance": "direct_vision",
+      "review_location": "§2.2–3.3, pp2–3; Figure 2",
+      "scope_note_zh": "明确面向 MAS，提出任务依赖、声明式计划、规则重写与计划验证；很适合核对 Planning 研究问题。",
+      "limitation_zh": "VLDB 2025 的 LLM+Graph workshop 愿景论文，不是 PVLDB 主会研究论文；也没有完成所提出方法的系统评测。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "summary_only",
+      "abstract_source": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/LLM%2BGraph/LLMGraph-8.pdf",
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": "明确面向 MAS，提出任务依赖、声明式计划、规则重写与计划验证；很适合核对 Planning 研究问题。",
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Workshop / Vision"
+    },
+    {
+      "key": "transaction",
+      "title": "The Transaction Concept: Virtues and Limitations",
+      "year": 1981,
+      "venue": "VLDB",
+      "cited_by": [
+        {
+          "seed": "SagaLLM",
+          "reference_number": 22,
+          "as_cited": "Jim Gray. The transaction concept: Virtues and limitations. In Proceedings of the Seventh International Conference on Very Large Data Bases, volume 7 of VLDB ’81, pages 144–154. VLDB Endowment, 1981."
+        }
+      ],
+      "is_seed": false,
+      "existing_doi": null,
+      "id": "cited:transaction",
+      "doi": null,
+      "url": null,
+      "pdf_url": null,
+      "authors": [],
+      "collection_group": "historical_background",
+      "include_in_recent_library": false,
+      "metadata_verification": "seed_citation_only",
+      "metadata_sources": [],
+      "bibliographic": {
+        "volume": null,
+        "issue": null,
+        "page": null
+      },
+      "mas_scope": "bibliographic_background",
+      "mas_scope_label": "Bibliographic background",
+      "primary_layer": null,
+      "primary_topic": null,
+      "planning_relevance": null,
+      "review_location": "Seed reference list",
+      "scope_note_zh": "种子论文引用的数据库背景文献；本轮不将其当作 MAS 方法证据。",
+      "limitation_zh": "未逐篇进行内容核验；保留引文以便追溯。",
+      "review_depth": "bibliographic_only",
+      "human_read": false,
+      "abstract": null,
+      "abstract_status": "missing",
+      "abstract_source": null,
+      "abstract_version": null,
+      "abstract_license": null,
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Background"
+    },
+    {
+      "key": "noma",
+      "title": "Rethinking Query Optimization for Multi-Agent Systems",
+      "year": 2026,
+      "venue": "VLDB",
+      "cited_by": [],
+      "is_seed": true,
+      "existing_doi": "10.14778/3845598.3845602",
+      "doi": "10.14778/3845598.3845602",
+      "id": "10.14778/3845598.3845602",
+      "url": "https://doi.org/10.14778/3845598.3845602",
+      "pdf_url": "https://www.vldb.org/pvldb/vol20/p46-kaoudi.pdf",
+      "authors": [
+        "Zoi Kaoudi",
+        "Ioana Giurgiu"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://www.vldb.org/pvldb/vol20.html"
+      ],
+      "bibliographic": {
+        "volume": 20,
+        "issue": 1,
+        "start_page": 46,
+        "end_page": 52
+      },
+      "mas_scope": "direct_mas",
+      "mas_scope_label": "DB for MAS: system / seed proposal",
+      "primary_layer": "Execution",
+      "primary_topic": "Workflow Optimization",
+      "planning_relevance": "boundary_reference",
+      "review_location": "§4–5, pp49–51",
+      "scope_note_zh": "直接优化 MAS 的可执行拓扑、模型和执行引擎，属 DB for MAS；主要产出是具体执行计划，主归 Execution。",
+      "limitation_zh": "愿景与研究议程，不能视为已完整实现并评测的通用优化器。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "The proliferation of large language models (LLMs) has accelerated the adoption of agent-based data pipelines. Yet current approaches remain ad hoc, relying on fixed structures, predefined LLMs, and single execution engines, without systematic optimization across heterogeneous data sources and engines. This paper presents NOMA, a query optimization framework for multi-agent data pipelines. We argue that optimizing agentic pipelines is a fundamentally different query optimization problem, with central challenges: (i) a multidimensional search and objective space, where topology, model, and engine choices must be optimized jointly across latency, cost, and accuracy; (ii) a variable pipeline topology; (iii) the co-existence of diverse data models, leaving no common operator algebra; and (iv) the significant cost of executing these pipelines. Our controlled experiment over a real-world 10-agent pipeline reveals extreme variance (153× cost, 5× latency, 25% quality) and that optimal plans are heterogeneous configurations no user would construct manually. Our analysis of real deployments confirms these inefficiencies are systematic. We present NOMA as an integrated optimization loop in which plan generation, cost estimation, runtime refinement, and semantic caching reinforce one another across executions, setting a community-wide research agenda on query optimization for multi-agent systems.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://www.vldb.org/pvldb/vol20/p46-kaoudi.pdf",
+      "abstract_version": "Published PVLDB PDF, abstract extracted from page 1",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Vision",
+      "metadata_note": "Official PVLDB PDF verified; Crossref lookup returned 404 during this audit. Publication year 2026, PVLDB volume 20 conference cycle 2027."
+    },
+    {
+      "key": "sagallm",
+      "title": "SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning",
+      "year": 2025,
+      "venue": "VLDB",
+      "cited_by": [],
+      "is_seed": true,
+      "existing_doi": "10.14778/3750601.3750611",
+      "doi": "10.14778/3750601.3750611",
+      "id": "10.14778/3750601.3750611",
+      "url": "https://doi.org/10.14778/3750601.3750611",
+      "pdf_url": "https://www.vldb.org/pvldb/vol18/p4874-chang.pdf",
+      "authors": [
+        "Edward Chang",
+        "Longling Geng"
+      ],
+      "collection_group": "recent_core",
+      "include_in_recent_library": true,
+      "metadata_verification": "official_source_or_publisher_metadata",
+      "metadata_sources": [
+        "https://openalex.org/W4414266729",
+        "https://www.vldb.org/pvldb/vol18.html",
+        "https://api.crossref.org/works/10.14778/3750601.3750611"
+      ],
+      "bibliographic": {
+        "volume": "18",
+        "issue": "12",
+        "first_page": "4874",
+        "last_page": "4886"
+      },
+      "mas_scope": "direct_mas",
+      "mas_scope_label": "DB for MAS: system / seed proposal",
+      "primary_layer": "Action",
+      "primary_topic": "Compensation and Recovery",
+      "planning_relevance": "supporting_mechanism",
+      "review_location": "Algorithm 1, p4879; §4.3–4.5, pp4879–4881",
+      "scope_note_zh": "包含任务 agents、全局验证 agent 和 Saga 协调 agent；Algorithm 1 提取角色和依赖。主条目归 Action 的补偿恢复，Planning 仅记录其角色/依赖构造机制。",
+      "limitation_zh": "未独立验证通用角色或依赖抽取器；Saga 补偿不等于任意外部 API 的全局 ACID。",
+      "review_depth": "selected_sections",
+      "human_read": false,
+      "abstract": "This paper introduces SagaLLM, a structured multi-agent architecture designed to address four foundational limitations of current LLM-based planning systems: unreliable self-validation, context loss, lack of transactional safeguards, and insufficient inter-agent coordination. While recent frameworks leverage LLMs for task decomposition and multi-agent communication, they often fail to ensure consistency, rollback, or constraint satisfaction across distributed workflows. SagaLLM bridges this gap by integrating the Saga transactional pattern with persistent memory, automated compensation, and independent validation agents. It leverages LLMs' generative reasoning to automate key tasks traditionally requiring hand-coded coordination logic, including state tracking, dependency analysis, log schema generation, and recovery orchestration. Although SagaLLM relaxes strict ACID guarantees, it ensures workflow-wide consistency and recovery through modular checkpointing and compensable execution. Empirical evaluations across planning domains demonstrate that standalone LLMs frequently violate interdependent constraints or fail to recover from disruptions. In contrast, SagaLLM achieves significant improvements in consistency, validation accuracy, and adaptive coordination under uncertainty—establishing a robust foundation for real-world, scalable LLM-based multi-agent systems.",
+      "abstract_status": "full_abstract",
+      "abstract_source": "https://api.openalex.org/works/W4414266729",
+      "abstract_version": "OpenAlex indexed abstract",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "summary_zh": null,
+      "reviewed_at": "2026-10-27",
+      "publication_type": "Experience",
+      "publisher_abstract_available": true
+    }
+  ],
+  "boundary_references": [
+    {
+      "source": "ACDS",
+      "reference": 12,
+      "title": "UQE: A Query Engine for Unstructured Databases",
+      "venue": "NeurIPS 2024",
+      "reason": "Not a database conference; retain as a boundary reference, not part of the DB-conference count."
+    },
+    {
+      "source": "ACDS",
+      "reference": 47,
+      "title": "An LLM Compiler for Parallel Function Calling",
+      "venue": "ICML 2024",
+      "reason": "Not a database conference; retain as a boundary reference, not part of the DB-conference count."
+    },
+    {
+      "source": "ACDS",
+      "reference": 106,
+      "title": "HuggingGPT",
+      "venue": "NeurIPS 2023",
+      "reason": "Not a database conference; retain as a boundary reference, not part of the DB-conference count."
+    },
+    {
+      "source": "ACDS",
+      "reference": 141,
+      "title": "AFlow: Automating Agentic Workflow Generation",
+      "venue": "ICLR 2025",
+      "reason": "Not a database conference; retain as a boundary reference, not part of the DB-conference count."
+    },
+    {
+      "source": "ACDS",
+      "reference": 145,
+      "title": "Language Agent Tree Search",
+      "venue": "ICML 2024",
+      "reason": "Not a database conference; retain as a boundary reference, not part of the DB-conference count."
+    },
+    {
+      "source": "ACDS",
+      "reference": 60,
+      "title": "Reason for Future, Act for Now (RAFA)",
+      "venue": "ICML 2024",
+      "reason": "Not a database conference; retain as a boundary reference, not part of the DB-conference count."
+    },
+    {
+      "source": "ACDS",
+      "reference": 110,
+      "title": "LakeBench: Benchmarks for Data Discovery over Data Lakes",
+      "venue": "Preprint in seed; DB-conference publication not verified",
+      "reason": "No confirmed matching DB-conference record in this audit; a similarly named demo is not silently substituted."
+    },
+    {
+      "source": "ACDS",
+      "reference": 127,
+      "title": "DB-GPT: Empowering Database Interactions with Private Large Language Models",
+      "venue": "Preprint in seed; DB-conference publication not verified",
+      "reason": "No confirmed matching DB-conference record in this audit; a similarly named demo is not silently substituted."
+    },
+    {
+      "source": "ACDS",
+      "reference": 147,
+      "title": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
+      "venue": "Preprint in seed; DB-conference publication not verified",
+      "reason": "No confirmed matching DB-conference record in this audit; a similarly named demo is not silently substituted."
+    },
+    {
+      "source": "NOMA",
+      "reference": 19,
+      "title": "GenDB: The Next Generation of Query Processing — Synthesized, Not Engineered",
+      "venue": "Preprint in seed; DB-conference publication not verified",
+      "reason": "No confirmed matching DB-conference record in this audit; a similarly named demo is not silently substituted."
+    }
+  ]
+}
