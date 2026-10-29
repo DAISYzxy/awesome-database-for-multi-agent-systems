@@ -16,6 +16,8 @@
 
 > [!NOTE]
 > A topic guide and paper list on **Database for Multi-Agent Systems (DB for MAS)**. The organizing framework follows our paper, *Agent-Centric Data System: Architecture, Literature, and Challenges*.
+>
+> For the complementary direction, see [**Multi-Agent Systems for Database (MAS for DB)**](https://github.com/DAISYzxy/awesome-multi-agent-systems-for-database): how collaborating agents perform data management, data preparation, and data analysis tasks.
 
 ## 📑 Contents
 
@@ -126,12 +128,12 @@ The sections below follow the [classification table](#topic-taxonomy).
 3. **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning.** [![VLDB '25](https://img.shields.io/badge/VLDB%20%2725-blue)](https://www.vldb.org/pvldb/vol18/p4874-chang.pdf)
 4. **Workload-Aware Caching for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2607.20495)
 5. **Governed Shared Memory for Multi-Agent LLM Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2606.24535)
-7. **G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems.** [![NeurIPS '25](https://img.shields.io/badge/NeurIPS%20%2725-cyan)](https://papers.neurips.cc/paper_files/paper/2025/file/136a45cd9b841bf785625709a19c6508-Paper-Conference.pdf)
-8. **Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2505.18279)
-9. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2602.21477)
-10. **MemOS: A Memory OS for AI System** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.03724)
-11. **MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2603.18718)
-12. **MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2609.21533)
+6. **G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems.** [![NeurIPS '25](https://img.shields.io/badge/NeurIPS%20%2725-cyan)](https://papers.neurips.cc/paper_files/paper/2025/file/136a45cd9b841bf785625709a19c6508-Paper-Conference.pdf)
+7. **Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2505.18279)
+8. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2602.21477)
+9. **MemOS: A Memory OS for AI System.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.03724)
+10. **MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2603.18718)
+11. **MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2609.21533)
 
 <a id="data-interface"></a>
 
