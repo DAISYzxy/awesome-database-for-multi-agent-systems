@@ -67,8 +67,8 @@ The table below defines the categories used by the paper list: **Layer → Data 
 
 | Layer | Data Management | Data Preparation | Data Analysis |
 | --- | --- | --- | --- |
-| **[Planning](#planning)** | Task Decomposition and Sharing |  Task Parsing and Normalization  | Task Reuse Analysis |
-| **[Execution](#execution)** | (1) Agent Assignment<br>(2) Workflow Optimization | (1) Agent Role Definition<br>(2) Inter-agent Dependency Construction | (1) Cost, Quality, Efficiency Estimation<br>(2) Error Propagation Analysis |
+| **[Planning](#planning)** | Task Decomposition and Sharing |  Dependency Construction  | Task Reuse Analysis |
+| **[Execution](#execution)** | (1) Agent Assignment<br>(2) Workflow Optimization | Agent Role Definition | (1) Cost, Quality, Efficiency Estimation<br>(2) Error Propagation Analysis |
 | **[Action](#action)** | (1) Tool Invocation<br>(2) Transaction Management | (1) Tool Grounding<br>(2) Parameter Binding | Action Validation and Effect Analysis |
 | **[Memory](#memory)** | (1) Shared Memory and State Management<br>(2) Semantic Caching | (1) Context Compression<br>(2) Log Structuring | Memory Consistency and Utility Analysis |
 | **[Data Interface](#data-interface)** | Data View and Access Management | (1) DataObject Description Construction<br>(2) Cross-source Object Resolution | Data View Validity/ Access Workload Analysis |
