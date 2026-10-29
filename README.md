@@ -38,7 +38,7 @@ Multi-agent systems bring together agents that share information, coordinate tas
 
 **Database for Multi-Agent Systems** explores how database and data-system techniques can improve the efficiency, correctness, and reliability of this collaboration. We organize the topic around three complementary perspectives: **data management**, **data preparation**, and **data analysis**.
 
-This repository provides an introduction to the topic and a reading list organized by the seven functional layers of the **Agent-Centric Data System (ACDS)** architecture. The layer definitions come from the paper. The [topic classification table](#topic-taxonomy) maps the DB for MAS topics to these layers and the three data perspectives, and defines where papers will be listed.
+This repository provides an introduction to the topic and a reading list organized by the functional layers of the **Agent-Centric Data System (ACDS)** architecture. The layer definitions come from the paper. The [topic classification table](#topic-taxonomy) maps the DB for MAS topics to these layers and the three data perspectives, and defines where papers will be listed.
 
 <a id="architecture"></a>
 
@@ -76,7 +76,7 @@ The table below defines the categories used by the paper list: **Layer â†’ Data 
 
 ## ðŸ“š Paper List
 
-The sections below follow the [classification table](#topic-taxonomy): **layer â†’ data perspective â†’ topic**. Entries identify the relevant mechanism, venue and year, evidence scope, and paper links.
+The sections below follow the [classification table](#topic-taxonomy).
 
 > **Cross-layer optimization.** Many works optimize across multiple layers: the optimization target and the layer implementing the optimization need not be the same. For example, [Helium](https://arxiv.org/html/2603.16104v1) targets efficient LLM serving, with KV cache management and reuse as central concerns, while also batching queries and optimizing logical workflows through common-subgraph merging and reuse analysis. A paper may therefore appear under multiple layers.
 
@@ -120,10 +120,9 @@ The sections below follow the [classification table](#topic-taxonomy): **layer â
 ### Memory Layer: Manage, Prepare, Analyze Memory
 
 1. **Rethinking Query Optimization for Multi-Agent Systems.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol20/p46-kaoudi.pdf)
-2. **Supporting Our AI Overlords: Redesigning Data Systems to be Agent-First.** [![CIDR '26](https://img.shields.io/badge/CIDR%20%2726-orange)](https://www.cidrdb.org/cidr2026/papers/p32-liu.pdf)
-3. **Learning to Share: Selective Memory for Efficient Parallel Agentic Systems.** [![ICML '26](https://img.shields.io/badge/ICML%20%2726-yellow)](https://arxiv.org/abs/2602.05965)
-4. **DataLab: A Unified Platform for LLM-Powered Business Intelligence.** [![ICDE '25](https://img.shields.io/badge/ICDE%20%2725-green)](https://arxiv.org/html/2412.02205v3)
-5. **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning.** [![VLDB '25](https://img.shields.io/badge/VLDB%20%2725-blue)](https://www.vldb.org/pvldb/vol18/p4874-chang.pdf)
+2. **Learning to Share: Selective Memory for Efficient Parallel Agentic Systems.** [![ICML '26](https://img.shields.io/badge/ICML%20%2726-yellow)](https://arxiv.org/abs/2602.05965)
+3. **DataLab: A Unified Platform for LLM-Powered Business Intelligence.** [![ICDE '25](https://img.shields.io/badge/ICDE%20%2725-green)](https://arxiv.org/html/2412.02205v3)
+4. **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning.** [![VLDB '25](https://img.shields.io/badge/VLDB%20%2725-blue)](https://www.vldb.org/pvldb/vol18/p4874-chang.pdf)
 <!-- 4. **Workload-Aware Caching for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2607.20495)
 5. **Governed Shared Memory for Multi-Agent LLM Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2606.24535)
 7. **G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems.** [![NeurIPS '25](https://img.shields.io/badge/NeurIPS%20%2725-cyan)](https://papers.neurips.cc/paper_files/paper/2025/file/136a45cd9b841bf785625709a19c6508-Paper-Conference.pdf)
@@ -132,7 +131,7 @@ The sections below follow the [classification table](#topic-taxonomy): **layer â
 
 <a id="data-interface"></a>
 
-### Data Interface Layer: 
+### Data Interface Layer: Manage, Prepare, Analyze the Interface
 
 1. **Supporting Our AI Overlords: Redesigning Data Systems to be Agent-First.** [![CIDR '26](https://img.shields.io/badge/CIDR%20%2726-orange)](https://www.cidrdb.org/cidr2026/papers/p32-liu.pdf)
 
@@ -140,7 +139,8 @@ The sections below follow the [classification table](#topic-taxonomy): **layer â
 
 
 <a id="inference-infrastructure"></a>
-### Inference Infrastructure Layer
+### Inference Infrastructure Layer: Manage, Prepare, Analyze the Inference Infrastructure
+
 1. **Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective (Helium).** [![SIGMOD '26](https://img.shields.io/badge/SIGMOD%20%2726-red)](https://arxiv.org/html/2603.16104v1)
 2. **AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System.** [![SIGMOD '26](https://img.shields.io/badge/SIGMOD%20%2726-red)](https://arxiv.org/abs/2605.23389)
 3. **RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol19/p1016-lu.pdf)
