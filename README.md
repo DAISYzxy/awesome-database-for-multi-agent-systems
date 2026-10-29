@@ -132,8 +132,10 @@ The sections below follow the [classification table](#topic-taxonomy).
 7. **Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2505.18279)
 8. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2602.21477)
 9. **MemOS: A Memory OS for AI System.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.03724)
-10. **MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2603.18718)
-11. **MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2609.21533)
+10. **MIRIX: Multi-Agent Memory System for LLM-Based Agents** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)]( https://arxiv.org/abs/2507.07957)
+11. **MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2603.18718)
+12. **MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2609.21533)
+
 
 <a id="data-interface"></a>
 
