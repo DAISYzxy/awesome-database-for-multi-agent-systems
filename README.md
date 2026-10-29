@@ -142,10 +142,12 @@ The sections below follow the [classification table](#topic-taxonomy).
 <a id="inference-infrastructure"></a>
 ### Inference Infrastructure Layer: Manage, Prepare, Analyze the Inference Infrastructure
 
-1. **Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective (Helium).** [![SIGMOD '26](https://img.shields.io/badge/SIGMOD%20%2726-red)](https://arxiv.org/html/2603.16104v1)
-2. **Mil: Cost-guided Minimum Makespan Scheduling for Applications of Multiple LLMs.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol19/p1893-fang.pdf)
-3. **HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL.** [![ICDE '26](https://img.shields.io/badge/ICDE%20%2726-green)](https://arxiv.org/html/2505.05286v3)
-4. **Agentix: An Efficient Serving Engine for LLM Agents as General Programs.** [![NSDI '26](https://img.shields.io/badge/NSDI%20%2726-teal)](https://www.usenix.org/system/files/nsdi26-luo.pdf)
+1. **TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications.** [![EuroSys '27](https://img.shields.io/badge/EuroSys%20%2727-teal)](https://arxiv.org/html/2510.18586v5)
+2. **Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective (Helium).** [![SIGMOD '26](https://img.shields.io/badge/SIGMOD%20%2726-red)](https://arxiv.org/html/2603.16104v1)
+3. **Mil: Cost-guided Minimum Makespan Scheduling for Applications of Multiple LLMs.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol19/p1893-fang.pdf)
+4. **HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL.** [![ICDE '26](https://img.shields.io/badge/ICDE%20%2726-green)](https://arxiv.org/html/2505.05286v3)
+5. **Agentix: An Efficient Serving Engine for LLM Agents as General Programs.** [![NSDI '26](https://img.shields.io/badge/NSDI%20%2726-teal)](https://www.usenix.org/system/files/nsdi26-luo.pdf)
+6. **TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/html/2608.25523v1)
 
 ## Citation
 
