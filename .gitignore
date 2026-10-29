@@ -4,3 +4,7 @@ Thumbs.db
 *.tmp
 .vscode/
 .idea/
+
+# Local research notes and review data
+/docs/
+/data/
