@@ -4,7 +4,7 @@ Thank you for helping build the Database for Multi-Agent Systems reading list.
 
 ## Suggest a paper
 
-Open an issue using the **Recommend a paper** template, or submit a pull request with an entry under the relevant topic in [README.md](README.md#paper-list).
+Open an issue or submit a pull request with an entry under the relevant topic in [README.md](README.md#paper-list).
 
 Include the paper title, a primary-source link, venue and year, and a classification from the [topic table](README.md#topic-taxonomy): **layer → data perspective → topic**. Briefly explain how the work uses database or data-system techniques to support multi-agent collaboration. Use an official publication page, DOI, or author-hosted preprint for the paper link. Identify preprints as such.
 
@@ -32,7 +32,7 @@ Do not infer MAS from multiple LLM calls, multiple pipeline candidates, multiple
 
 Place papers under the topics supported by primary-source evidence. Cross-layer works may appear in multiple layers or topics: explain the specific mechanism and evidence boundary in each entry, and provide source and PDF links. Count each publication only once in unique-paper totals; primary-layer labels in the review inventory are bookkeeping, not a restriction on display. Cells marked with an em dash (—) have no assigned topic in the current taxonomy; Perception is retained as an architecture layer with no topic entries yet.
 
-Keep topic headings identical to those in the classification table. If proposing a taxonomy change, explain it separately and update the table, matching paper-list headings, and issue-template options together.
+Keep topic headings identical to those in the classification table. If proposing a taxonomy change, explain it separately and update the table and matching paper-list headings together.
 
 ## Entry format
 

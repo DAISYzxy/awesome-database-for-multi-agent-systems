@@ -1,7 +1,7 @@
-<h1 align="center">🗃️ Database for Multi-Agent Systems</h1>
+<h1 align="center">🗃️ Database for Multi-Agent System Papers</h1>
 
 <p align="center">
-  <strong>Data management, data preparation, and data analysis for multi-agent collaboration.</strong>
+  <strong>Data management, data preparation, and data analysis for multi-agent collaboration works.</strong>
 </p>
 
 <p align="center">
@@ -29,6 +29,8 @@
   - [Memory](#memory)
   - [Data Interface](#data-interface)
   - [Inference Infrastructure](#inference-infrastructure)
+- [Citations](#citations)
+  - [Cite This List](#cite-this-list)
 
 <a id="introduction"></a>
 
@@ -65,8 +67,8 @@ The table below defines the categories used by the paper list: **Layer → Data 
 
 | Layer | Data Management | Data Preparation | Data Analysis |
 | --- | --- | --- | --- |
-| **[Planning](#planning)** | Task Decomposition and Sharing |  —  | Task Reuse Analysis |
-| **[Execution](#execution)** | (1) Workflow Optimization<br>(2) Communication Optimization | (1) Agent Role Extraction<br>(2) Inter-agent Dependency Construction | (1) Cost, Quality, Efficiency Estimation<br>(2) Error Propagation Analysis |
+| **[Planning](#planning)** | Task Decomposition and Sharing |  Task Parsing and Normalization  | Task Reuse Analysis |
+| **[Execution](#execution)** | (1) Agent Assignment<br>(2) Workflow Optimization | (1) Agent Role Definition<br>(2) Inter-agent Dependency Construction | (1) Cost, Quality, Efficiency Estimation<br>(2) Error Propagation Analysis |
 | **[Action](#action)** | Compensation and Recovery | — | Recovery Analysis |
 | **[Memory](#memory)** | (1) Shared Memory Management<br>(2) State Management<br>(3) Semantic Caching | (1) Context Compression<br>(2) Log Structuring | State Consistency Analysis |
 | **[Data Interface](#data-interface)** | (1) Data View Maintenance<br>(2) Concurrency Control | (1) DataObject Description Construction<br>(2) Cross-source Object Resolution | Data View Validity/ Access Workload Analysis |
@@ -120,9 +122,8 @@ The sections below follow the [classification table](#topic-taxonomy).
 ### Memory Layer: Manage, Prepare, Analyze Memory
 
 1. **Rethinking Query Optimization for Multi-Agent Systems.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol20/p46-kaoudi.pdf)
-2. **Learning to Share: Selective Memory for Efficient Parallel Agentic Systems.** [![ICML '26](https://img.shields.io/badge/ICML%20%2726-yellow)](https://arxiv.org/abs/2602.05965)
-3. **DataLab: A Unified Platform for LLM-Powered Business Intelligence.** [![ICDE '25](https://img.shields.io/badge/ICDE%20%2725-green)](https://arxiv.org/html/2412.02205v3)
-4. **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning.** [![VLDB '25](https://img.shields.io/badge/VLDB%20%2725-blue)](https://www.vldb.org/pvldb/vol18/p4874-chang.pdf)
+2. **DataLab: A Unified Platform for LLM-Powered Business Intelligence.** [![ICDE '25](https://img.shields.io/badge/ICDE%20%2725-green)](https://arxiv.org/html/2412.02205v3)
+3. **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning.** [![VLDB '25](https://img.shields.io/badge/VLDB%20%2725-blue)](https://www.vldb.org/pvldb/vol18/p4874-chang.pdf)
 <!-- 4. **Workload-Aware Caching for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2607.20495)
 5. **Governed Shared Memory for Multi-Agent LLM Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2606.24535)
 7. **G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems.** [![NeurIPS '25](https://img.shields.io/badge/NeurIPS%20%2725-cyan)](https://papers.neurips.cc/paper_files/paper/2025/file/136a45cd9b841bf785625709a19c6508-Paper-Conference.pdf)
@@ -148,3 +149,24 @@ The sections below follow the [classification table](#topic-taxonomy).
 5. **HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL.** [![ICDE '26](https://img.shields.io/badge/ICDE%20%2726-green)](https://arxiv.org/html/2505.05286v3)
 6. **Agentix: An Efficient Serving Engine for LLM Agents as General Programs.** [![NSDI '26](https://img.shields.io/badge/NSDI%20%2726-teal)](https://www.usenix.org/system/files/nsdi26-luo.pdf)
 7. **PQCache: Product Quantization-based KVCache for Long Context LLM Inference.** [![SIGMOD '25](https://img.shields.io/badge/SIGMOD%20%2725-red)](https://arxiv.org/abs/2407.12820)
+
+## Citations
+
+In the [arxiv_bibtex.bib](arxiv_bibtex.bib) file, you can find the BibTeX citations for all papers in the reading list.
+
+### Cite This List
+
+If you find this resource useful in your research, please cite it as follows:
+
+**BibTeX:**
+
+```bibtex
+@misc{zhu2026databasemultiagent,
+  author       = {Zhu, Xinyi},
+  title        = {{Database for Multi-Agent System Papers}},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/DAISYzxy/database-for-multi-agent-systems}},
+  note         = {Maintained by DAISYzxy}
+}
+```
