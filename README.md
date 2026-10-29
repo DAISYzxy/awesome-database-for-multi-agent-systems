@@ -124,10 +124,12 @@ The sections below follow the [classification table](#topic-taxonomy).
 1. **Rethinking Query Optimization for Multi-Agent Systems.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol20/p46-kaoudi.pdf)
 2. **DataLab: A Unified Platform for LLM-Powered Business Intelligence.** [![ICDE '25](https://img.shields.io/badge/ICDE%20%2725-green)](https://arxiv.org/html/2412.02205v3)
 3. **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning.** [![VLDB '25](https://img.shields.io/badge/VLDB%20%2725-blue)](https://www.vldb.org/pvldb/vol18/p4874-chang.pdf)
-<!-- 4. **Workload-Aware Caching for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2607.20495)
+4. **Workload-Aware Caching for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2607.20495)
 5. **Governed Shared Memory for Multi-Agent LLM Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2606.24535)
 7. **G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems.** [![NeurIPS '25](https://img.shields.io/badge/NeurIPS%20%2725-cyan)](https://papers.neurips.cc/paper_files/paper/2025/file/136a45cd9b841bf785625709a19c6508-Paper-Conference.pdf)
-8. **Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2505.18279) -->
+8. **Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2505.18279) 
+9. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving** [![arXiv preprint](https://arxiv.org/abs/2602.21477)]
+10. **MemOS: A Memory OS for AI System** [![arXiv preprint](https://arxiv.org/abs/2507.03724)]
 
 
 <a id="data-interface"></a>
