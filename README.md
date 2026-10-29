@@ -143,10 +143,9 @@ The sections below follow the [classification table](#topic-taxonomy).
 ### Inference Infrastructure Layer: Manage, Prepare, Analyze the Inference Infrastructure
 
 1. **Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective (Helium).** [![SIGMOD '26](https://img.shields.io/badge/SIGMOD%20%2726-red)](https://arxiv.org/html/2603.16104v1)
-2. **AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System.** [![SIGMOD '26](https://img.shields.io/badge/SIGMOD%20%2726-red)](https://arxiv.org/abs/2605.23389)
-3. **Mil: Cost-guided Minimum Makespan Scheduling for Applications of Multiple LLMs.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol19/p1893-fang.pdf)
-4. **HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL.** [![ICDE '26](https://img.shields.io/badge/ICDE%20%2726-green)](https://arxiv.org/html/2505.05286v3)
-5. **Agentix: An Efficient Serving Engine for LLM Agents as General Programs.** [![NSDI '26](https://img.shields.io/badge/NSDI%20%2726-teal)](https://www.usenix.org/system/files/nsdi26-luo.pdf)
+2. **Mil: Cost-guided Minimum Makespan Scheduling for Applications of Multiple LLMs.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol19/p1893-fang.pdf)
+3. **HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL.** [![ICDE '26](https://img.shields.io/badge/ICDE%20%2726-green)](https://arxiv.org/html/2505.05286v3)
+4. **Agentix: An Efficient Serving Engine for LLM Agents as General Programs.** [![NSDI '26](https://img.shields.io/badge/NSDI%20%2726-teal)](https://www.usenix.org/system/files/nsdi26-luo.pdf)
 
 ## Citation
 
