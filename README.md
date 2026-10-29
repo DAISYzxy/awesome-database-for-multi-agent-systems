@@ -1,4 +1,4 @@
-<h1 align="center">🗃️ Database for Multi-Agent System Papers</h1>
+<h1 align="center">🗃️ Awesome Database for Multi-Agent System Papers</h1>
 
 <p align="center">
   <strong>Data management, data preparation, and data analysis for multi-agent collaboration works.</strong>
@@ -158,10 +158,10 @@ If you find this resource useful in your research, please cite it as follows:
 ```bibtex
 @misc{zhu2026databasemultiagent,
   author       = {Zhu, Xinyi},
-  title        = {{Database for Multi-Agent System Papers}},
+  title        = {{Awesome Database for Multi-Agent System Papers}},
   year         = {2026},
   publisher    = {GitHub},
-  howpublished = {\url{https://github.com/DAISYzxy/database-for-multi-agent-systems}},
+  howpublished = {\url{https://github.com/DAISYzxy/awesome-database-for-multi-agent-systems}},
   note         = {Maintained by DAISYzxy}
 }
 ```
