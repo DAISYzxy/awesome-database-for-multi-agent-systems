@@ -158,7 +158,7 @@ If you find this resource useful in your research, please cite it as follows:
 
 ```bibtex
 @misc{zhu2026databasemultiagent,
-  author       = {Zhu, Xinyi},
+  author       = {Xinyi Zhu, Wenxin Zhao, Liping Wang},
   title        = {{Awesome Database for Multi-Agent System Papers}},
   year         = {2026},
   publisher    = {GitHub},
