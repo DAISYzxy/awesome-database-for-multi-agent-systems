@@ -126,10 +126,9 @@ The sections below follow the [classification table](#topic-taxonomy).
 1. **Rethinking Query Optimization for Multi-Agent Systems.** [![VLDB '26](https://img.shields.io/badge/VLDB%20%2726-blue)](https://www.vldb.org/pvldb/vol20/p46-kaoudi.pdf)
 2. **DataLab: A Unified Platform for LLM-Powered Business Intelligence.** [![ICDE '25](https://img.shields.io/badge/ICDE%20%2725-green)](https://arxiv.org/html/2412.02205v3)
 3. **SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning.** [![VLDB '25](https://img.shields.io/badge/VLDB%20%2725-blue)](https://www.vldb.org/pvldb/vol18/p4874-chang.pdf)
-4. **Workload-Aware Caching for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2607.20495)
-5. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2602.21477)
-6. **MemOS: A Memory OS for AI System.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.03724)
-7. **MIRIX: Multi-Agent Memory System for LLM-Based Agents.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.07957)
+4. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2602.21477)
+5. **MemOS: A Memory OS for AI System.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.03724)
+6. **MIRIX: Multi-Agent Memory System for LLM-Based Agents.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.07957)
 
 <a id="data-interface"></a>
 
