@@ -63,16 +63,16 @@ This repository provides an introduction to the topic and a reading list organiz
 
 ### Topic Taxonomy
 
-The table below defines the categories used by the paper list: **Layer → Data Management / Data Preparation / Data Analysis → Topic**. Click a topic to jump to its paper section. An em dash (—) marks a cell with no topic currently assigned.
+The table below defines the categories used by the paper list: **Layer → Data Management / Data Preparation / Data Analysis → Topic**. 
 
 | Layer | Data Management | Data Preparation | Data Analysis |
 | --- | --- | --- | --- |
 | **[Planning](#planning)** | Task Decomposition and Sharing |  Task Parsing and Normalization  | Task Reuse Analysis |
 | **[Execution](#execution)** | (1) Agent Assignment<br>(2) Workflow Optimization | (1) Agent Role Definition<br>(2) Inter-agent Dependency Construction | (1) Cost, Quality, Efficiency Estimation<br>(2) Error Propagation Analysis |
-| **[Action](#action)** | Compensation and Recovery | — | Recovery Analysis |
-| **[Memory](#memory)** | (1) Shared Memory Management<br>(2) State Management<br>(3) Semantic Caching | (1) Context Compression<br>(2) Log Structuring | State Consistency Analysis |
-| **[Data Interface](#data-interface)** | (1) Data View Maintenance<br>(2) Concurrency Control | (1) DataObject Description Construction<br>(2) Cross-source Object Resolution | Data View Validity/ Access Workload Analysis |
-| **[Inference Infrastructure](#inference-infrastructure)** | (1) KV Cache Management<br>(2) Inference and Data Scheduling | Shared KVs Preparation | Cache Cost and Efficiency Analysis |
+| **[Action](#action)** | (1) Tool Invocation<br>(2) Transaction Management | (1) Tool Grounding<br>(2) Parameter Binding | Action Validation and Effect Analysis |
+| **[Memory](#memory)** | (1) Shared Memory and State Management<br>(2) Semantic Caching | (1) Context Compression<br>(2) Log Structuring | Memory Consistency and Utility Analysis |
+| **[Data Interface](#data-interface)** | Data View and Access Management | (1) DataObject Description Construction<br>(2) Cross-source Object Resolution | Data View Validity/ Access Workload Analysis |
+| **[Inference Infrastructure](#inference-infrastructure)** | Inference Scheduling and Runtime State Management | KV State Alignment and Encoding | Runtime Cost and Reuse Benefit Analysis |
 
 <a id="paper-list"></a>
 
@@ -150,11 +150,7 @@ The sections below follow the [classification table](#topic-taxonomy).
 6. **Agentix: An Efficient Serving Engine for LLM Agents as General Programs.** [![NSDI '26](https://img.shields.io/badge/NSDI%20%2726-teal)](https://www.usenix.org/system/files/nsdi26-luo.pdf)
 7. **PQCache: Product Quantization-based KVCache for Long Context LLM Inference.** [![SIGMOD '25](https://img.shields.io/badge/SIGMOD%20%2725-red)](https://arxiv.org/abs/2407.12820)
 
-## Citations
-
-In the [arxiv_bibtex.bib](arxiv_bibtex.bib) file, you can find the BibTeX citations for all papers in the reading list.
-
-### Cite This List
+## Citation
 
 If you find this resource useful in your research, please cite it as follows:
 
