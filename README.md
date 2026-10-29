@@ -129,6 +129,7 @@ The sections below follow the [classification table](#topic-taxonomy).
 4. **Workload-Aware Caching for Multi-Agent Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2607.20495)
 5. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2602.21477)
 6. **MemOS: A Memory OS for AI System.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.03724)
+7. **MIRIX: Multi-Agent Memory System for LLM-Based Agents.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.07957)
 
 <a id="data-interface"></a>
 
