@@ -128,10 +128,10 @@ The sections below follow the [classification table](#topic-taxonomy).
 5. **Governed Shared Memory for Multi-Agent LLM Systems.** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2606.24535)
 7. **G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems.** [![NeurIPS '25](https://img.shields.io/badge/NeurIPS%20%2725-cyan)](https://papers.neurips.cc/paper_files/paper/2025/file/136a45cd9b841bf785625709a19c6508-Paper-Conference.pdf)
 8. **Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control.** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2505.18279)
-9. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2602.21477)
+9. **Pancake: Hierarchical Memory System for Multi-Agent LLM Serving** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2602.21477)
 10. **MemOS: A Memory OS for AI System** [![arXiv '25](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2507.03724)
-11. **MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2603.18718)
-12. **MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2725-purple)](https://arxiv.org/abs/2609.21533)
+11. **MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2603.18718)
+12. **MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems** [![arXiv '26](https://img.shields.io/badge/arXiv%20%2726-purple)](https://arxiv.org/abs/2609.21533)
 
 <a id="data-interface"></a>
 
